@@ -1,0 +1,126 @@
+import React from 'react';
+import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+
+const Contact = () => {
+  return (
+    <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-celestial-50 to-dorado-50">
+      <div className="max-w-6xl mx-auto">
+        <div className="text-center mb-16">
+          {/* EDITABLE: Título de la sección */}
+          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-esperanza-800 mb-4">
+            Contáctanos
+          </h2>
+          {/* EDITABLE: Descripción de la sección */}
+          <p className="text-xl font-source text-esperanza-600">
+            Estamos aquí para acompañarte en tu búsqueda espiritual
+          </p>
+        </div>
+
+        <div className="grid md:grid-cols-2 gap-12">
+          <div className="card-celestial p-8 rounded-2xl">
+            {/* EDITABLE: Título de información de contacto */}
+            <h3 className="text-2xl font-poppins font-bold text-esperanza-800 mb-6">
+              Información de Contacto
+            </h3>
+            
+            <div className="space-y-6">
+              <div className="flex items-start">
+                <Mail className="h-6 w-6 text-celestial-500 mt-1 mr-4 flex-shrink-0" />
+                <div>
+                  <h4 className="font-poppins font-semibold text-esperanza-800">Email</h4>
+                  {/* EDITABLE: Dirección de email */}
+                  <p className="font-source text-esperanza-600">librosdeesperanza@gmail.com</p>
+                  {/* EDITABLE: Tiempo de respuesta por email */}
+                  <p className="text-sm font-source text-esperanza-500 mt-1">
+                    Responderemos en menos de 24 horas
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <Phone className="h-6 w-6 text-green-500 mt-1 mr-4 flex-shrink-0" />
+                <div>
+                  <h4 className="font-poppins font-semibold text-esperanza-800">Teléfono</h4>
+                  {/* EDITABLE: Número de teléfono */}
+                  <p className="font-source text-esperanza-600">+56 9 1234 5678</p>
+                  {/* EDITABLE: Información adicional del teléfono */}
+                  <p className="text-sm font-source text-esperanza-500 mt-1">
+                    WhatsApp disponible
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <MapPin className="h-6 w-6 text-red-500 mt-1 mr-4 flex-shrink-0" />
+                <div>
+                  <h4 className="font-poppins font-semibold text-esperanza-800">Cobertura</h4>
+                  {/* EDITABLE: Área de cobertura */}
+                  <p className="font-source text-esperanza-600">Todo Chile</p>
+                  {/* EDITABLE: Información de envíos */}
+                  <p className="text-sm font-source text-esperanza-500 mt-1">
+                    Envíos gratuitos a todo el país
+                  </p>
+                </div>
+              </div>
+              
+              <div className="flex items-start">
+                <Clock className="h-6 w-6 text-dorado-500 mt-1 mr-4 flex-shrink-0" />
+                <div>
+                  <h4 className="font-poppins font-semibold text-esperanza-800">Horario de Atención</h4>
+                  {/* EDITABLE: Horarios de atención */}
+                  <p className="font-source text-esperanza-600">Lunes a Viernes: 9:00 - 18:00</p>
+                  <p className="font-source text-esperanza-600">Sábados: 10:00 - 14:00</p>
+                  {/* EDITABLE: Zona horaria */}
+                  <p className="text-sm font-source text-esperanza-500 mt-1">
+                    Horario de Chile Continental
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="card-celestial p-8 rounded-2xl">
+            {/* EDITABLE: Título de la misión */}
+            <h3 className="text-2xl font-poppins font-bold text-esperanza-800 mb-6">
+              Nuestra Misión
+            </h3>
+            
+            <div className="space-y-4 font-source text-esperanza-600 leading-relaxed">
+              {/* EDITABLE: Párrafos de la misión */}
+              <p>
+                En un mundo lleno de incertidumbre y dolor, creemos que cada persona 
+                merece encontrar esperanza, paz y propósito. Estos libros han sido 
+                una fuente de luz para millones de personas durante más de 150 años.
+              </p>
+              
+              <p>
+                No buscamos lucro ni promocionamos ninguna denominación específica. 
+                Nuestro único deseo es que encuentres las respuestas que tu corazón 
+                busca y experimentes la transformación que solo la verdad puede traer.
+              </p>
+              
+              <p>
+                Cada libro que enviamos es un acto de amor y esperanza. Creemos que 
+                en sus páginas encontrarás no solo conocimiento, sino la paz que 
+                sobrepasa todo entendimiento.
+              </p>
+            </div>
+
+            <div className="mt-8 p-6 bg-gradient-dorado rounded-xl border border-dorado-200">
+              {/* EDITABLE: Cita inspiracional */}
+              <h4 className="font-poppins font-bold text-esperanza-800 mb-2">
+                "La esperanza es el sueño del hombre despierto"
+              </h4>
+              {/* EDITABLE: Mensaje de la cita */}
+              <p className="font-source text-esperanza-600 text-sm">
+                Permítenos ser parte de tu despertar espiritual
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Contact;

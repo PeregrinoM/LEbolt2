@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700;800&family=Source+Sans+Pro:wght@400;600&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: 'Source Sans Pro', sans-serif;
+    line-height: 1.6;
+    /* Optimizaciones para móvil */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+  }
+
+  /* Optimizaciones de scroll para móvil */
+  html {
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* Mejorar el tap en móviles */
+  button, a, input, textarea {
+    -webkit-tap-highlight-color: rgba(59, 130, 246, 0.1);
+    touch-action: manipulation;
+  }
+
+  /* Optimizar inputs en móvil */
+  input, textarea, select {
+    font-size: 16px; /* Previene zoom en iOS */
+  }
+}
+
+@layer components {
+  .text-gradient-celestial {
+    @apply bg-gradient-to-r from-celestial-500 to-dorado-500 bg-clip-text text-transparent;
+  }
+  
+  .btn-celestial {
+    @apply bg-gradient-to-r from-celestial-400 to-celestial-500 hover:from-celestial-500 hover:to-celestial-600 text-white font-poppins font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+    /* Optimización para móvil */
+    min-height: 44px; /* Tamaño mínimo recomendado para touch */
+    min-width: 44px;
+  }
+  
+  .card-celestial {
+    @apply bg-white/80 backdrop-blur-sm border border-celestial-100 shadow-lg hover:shadow-xl transition-all duration-300;
+  }
+
+  /* Componentes específicos para móvil */
+  .mobile-touch-target {
+    min-height: 44px;
+    min-width: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-input {
+    @apply px-4 py-4 text-lg border-2 rounded-xl transition-all duration-200;
+    min-height: 56px; /* Altura cómoda para móvil */
+  }
+
+  .mobile-card {
+    @apply p-6 rounded-2xl shadow-lg;
+    /* Evitar que las tarjetas sean demasiado pequeñas en móvil */
+    min-height: 120px;
+  }
+}
+
+@layer utilities {
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+  
+  .animate-fade-in {
+    animation: fadeIn 0.8s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.6s ease-out;
+  }
+
+  /* Animaciones optimizadas para móvil */
+  .animate-slide-in-mobile {
+    animation: slideInMobile 0.3s ease-out;
+  }
+
+  .animate-bounce-gentle {
+    animation: bounceGentle 2s ease-in-out infinite;
+  }
+
+  /* Utilidades para gestos táctiles */
+  .swipe-indicator {
+    position: relative;
+  }
+
+  .swipe-indicator::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background: linear-gradient(90deg, transparent, rgba(59, 130, 246, 0.5), transparent);
+    border-radius: 2px;
+    animation: swipeHint 2s ease-in-out infinite;
+  }
+
+  /* Optimizaciones de rendimiento */
+  .gpu-accelerated {
+    transform: translateZ(0);
+    will-change: transform;
+  }
+
+  .reduce-motion {
+    animation: none !important;
+    transition: none !important;
+  }
+
+  /* Media query para usuarios que prefieren menos movimiento */
+  @media (prefers-reduced-motion: reduce) {
+    * {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInMobile {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes bounceGentle {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes swipeHint {
+  0%, 100% {
+    opacity: 0.3;
+    transform: translateX(-50%) scaleX(0.8);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateX(-50%) scaleX(1.2);
+  }
+}
+
+/* Optimizaciones específicas para dispositivos móviles */
+@media (max-width: 768px) {
+  /* Mejorar legibilidad en pantallas pequeñas */
+  .text-sm {
+    font-size: 0.9rem;
+  }
+  
+  .text-base {
+    font-size: 1rem;
+  }
+
+  /* Espaciado optimizado para móvil */
+  .mobile-spacing {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+  }
+
+  /* Botones más grandes en móvil */
+  .btn-mobile {
+    padding: 1rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 0.75rem;
+  }
+}
+
+/* Optimizaciones para pantallas de alta densidad */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .high-dpi-optimized {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
