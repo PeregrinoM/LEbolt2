@@ -1,5 +1,5 @@
 import React from 'react';
-import { Mail, Phone, MapPin, Clock } from 'lucide-react';
+import { Mail, Phone, MapPin, Clock, MessageCircleReplyIcon, MessageCircleIcon } from 'lucide-react';
 
 const Contact = () => {
   return (
@@ -12,7 +12,7 @@ const Contact = () => {
           </h2>
           {/* EDITABLE: Descripción de la sección */}
           <p className="text-xl font-source text-esperanza-600">
-            Estamos aquí para acompañarte en tu búsqueda espiritual
+            Así te enviaremos el libro y acompañarte en tu búsqueda del conocimiento de Dios
           </p>
         </div>
 
@@ -38,7 +38,7 @@ const Contact = () => {
               </div>
               
               <div className="flex items-start">
-                <Phone className="h-6 w-6 text-green-500 mt-1 mr-4 flex-shrink-0" />
+                <MessageCircleIcon className="h-6 w-6 text-green-500 mt-1 mr-4 flex-shrink-0" />
                 <div>
                   <h4 className="font-poppins font-semibold text-esperanza-800">Teléfono</h4>
                   {/* EDITABLE: Número de teléfono */}
@@ -69,7 +69,7 @@ const Contact = () => {
                   <h4 className="font-poppins font-semibold text-esperanza-800">Horario de Atención</h4>
                   {/* EDITABLE: Horarios de atención */}
                   <p className="font-source text-esperanza-600">Lunes a Viernes: 9:00 - 18:00</p>
-                  <p className="font-source text-esperanza-600">Sábados: 10:00 - 14:00</p>
+                  <p className="font-source text-esperanza-600">Domingo: 09:00 - 18:00</p>
                   {/* EDITABLE: Zona horaria */}
                   <p className="text-sm font-source text-esperanza-500 mt-1">
                     Horario de Chile Continental
@@ -89,19 +89,19 @@ const Contact = () => {
               {/* EDITABLE: Párrafos de la misión */}
               <p>
                 En un mundo lleno de incertidumbre y dolor, creemos que cada persona 
-                merece encontrar esperanza, paz y propósito. Estos libros han sido 
-                una fuente de luz para millones de personas durante más de 150 años.
+                puede encontrar esperanza, paz y propósito. Estos libros han sido 
+                una fuente de luz para millones de personas.
               </p>
               
               <p>
                 No buscamos lucro ni promocionamos ninguna denominación específica. 
                 Nuestro único deseo es que encuentres las respuestas que tu corazón 
-                busca y experimentes la transformación que solo la verdad puede traer.
+                busca y experimentes la transformación que solo la verdad (Cristro) puede traer a tu corazón.
               </p>
               
               <p>
                 Cada libro que enviamos es un acto de amor y esperanza. Creemos que 
-                en sus páginas encontrarás no solo conocimiento, sino la paz que 
+                en sus páginas encontrarás no solo conocimiento, sino la Esperanza que 
                 sobrepasa todo entendimiento.
               </p>
             </div>
@@ -109,11 +109,11 @@ const Contact = () => {
             <div className="mt-8 p-6 bg-gradient-dorado rounded-xl border border-dorado-200">
               {/* EDITABLE: Cita inspiracional */}
               <h4 className="font-poppins font-bold text-esperanza-800 mb-2">
-                "La esperanza es el sueño del hombre despierto"
+                "A ellos Dios les quiso dar a conocer la gloriosa riqueza que ese designio encierra para todas las naciones. Y ese designio secreto es Cristo, que está entre ustedes y que es la esperanza de la gloria que han de tener"
               </h4>
               {/* EDITABLE: Mensaje de la cita */}
               <p className="font-source text-esperanza-600 text-sm">
-                Permítenos ser parte de tu despertar espiritual
+              Colosenses 1:27 DHH
               </p>
             </div>
           </div>

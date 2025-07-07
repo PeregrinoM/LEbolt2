@@ -1,5 +1,5 @@
 import React from 'react';
-import { Star, Clock, Users, Lightbulb } from 'lucide-react';
+import { Star, Clock, Users, Lightbulb, PenLineIcon } from 'lucide-react';
 import LazyImage from './LazyImage';
 
 const AboutBooks = () => {
@@ -12,32 +12,31 @@ const AboutBooks = () => {
       description: "Una obra maestra que revela la gran controversia entre el bien y el mal a través de la historia. Descubre las profecías bíblicas y su cumplimiento, encontrando esperanza para el futuro.",
       // EDITABLE: Características del primer libro
       features: [
-        "Historia profética revelada",
+        "La preocupacion constante de Dios por sus hijos",
         "Esperanza para tiempos difíciles",
-        "Perspectiva eterna de los eventos",
-        "Fortaleza espiritual"
+        "Historia profética revelada",
+        "La Verdad te hara libre"
       ],
-      icon: <Star className="h-8 w-8 text-dorado-500" />,
+      icon: <PenLineIcon className="h-8 w-8 text-dorado-500" />,
       gradient: "from-dorado-50 to-dorado-100",
       // Imagen del libro (opcional)
-      image: "https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop"
+      image: "https://images.pexels.com/photos/32897511/pexels-photo-32897511.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop"
     },
     {
       // EDITABLE: Título del segundo libro
       title: "El Camino a Cristo",
       // EDITABLE: Descripción del segundo libro
-      description: "Un libro que ha guiado a millones hacia una relación personal con Jesús. Pasos sencillos y prácticos para encontrar paz, perdón y una nueva vida en Cristo.",
+      description: "Un mensaje inspirador que te conecta con el Salvador. A través de sus palabras, hallarás esperanza, transformación y la paz que el alma busca.",
       // EDITABLE: Características del segundo libro
       features: [
-        "Pasos hacia la salvación",
-        "Paz interior duradera",
+        "Pasos hacia a Cristo",
+        "Paz interior que solo Dios puede dar",
         "Relación personal con Dios",
-        "Transformación del corazón"
       ],
-      icon: <Lightbulb className="h-8 w-8 text-celestial-500" />,
+      icon: <PenLineIcon className="h-8 w-8 text-celestial-500" />,
       gradient: "from-celestial-50 to-celestial-100",
       // Imagen del libro (opcional)
-      image: "https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop"
+      image: "https://images.pexels.com/photos/32897639/pexels-photo-32897639.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop"
     }
   ];
 
@@ -51,8 +50,8 @@ const AboutBooks = () => {
           </h2>
           {/* EDITABLE: Descripción de la sección */}
           <p className="text-xl font-source text-esperanza-600 max-w-3xl mx-auto">
-            Dos obras maestras de la literatura cristiana, disponibles gratuitamente para ti. 
-            Elige el que más resuene con tu búsqueda espiritual.
+          Historias de redención, profecía y amor divino al alcance de todos. 
+          Descubre el mensaje que tu corazón necesita hoy.
           </p>
         </div>
 
@@ -107,14 +106,9 @@ const AboutBooks = () => {
             <div className="flex flex-col items-center">
               <Clock className="h-12 w-12 text-green-500 mb-4" />
               {/* EDITABLE: Años de historia */}
-              <h4 className="text-xl font-poppins font-bold text-esperanza-800 mb-2">Más de 150 Años</h4>
+              <h4 className="text-xl font-poppins font-bold text-esperanza-800 mb-2">Más de 110 Años</h4>
               {/* EDITABLE: Año de inicio */}
-              <p className="font-source text-esperanza-600">Transformando vidas desde 1858</p>
-            </div>
-            <div className="flex flex-col items-center">
-              <Star className="h-12 w-12 text-dorado-500 mb-4" />
-              <h4 className="text-xl font-poppins font-bold text-esperanza-800 mb-2">Impacto Duradero</h4>
-              <p className="font-source text-esperanza-600">Testimonios de transformación mundial</p>
+              <p className="font-source text-esperanza-600">Transformando vidas desde 1911</p>
             </div>
           </div>
         </div>
