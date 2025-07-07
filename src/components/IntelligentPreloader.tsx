@@ -172,6 +172,11 @@ const IntelligentPreloader: React.FC = () => {
     const handleMouseEnter = (e: MouseEvent) => {
       const target = e.target as HTMLElement;
       
+      // Check if target is an Element before calling closest
+      if (!(target instanceof Element)) {
+        return;
+      }
+      
       // Si el usuario hace hover sobre un enlace de navegación
       if (target.closest('[data-section]')) {
         const sectionId = target.closest('[data-section]')?.getAttribute('data-section');
