@@ -10,7 +10,7 @@ const FAQ = () => {
       // EDITABLE: Pregunta 1
       question: "¿Realmente es completamente gratuito?",
       // EDITABLE: Respuesta 1
-      answer: "Sí, absolutamente gratuito. No hay costos ocultos, no pagas envío, no hay suscripciones. Es un regalo genuino para ti."
+      answer: "Sí, absolutamente gratuito. No hay costos ocultos, no pagas envío, no hay suscripciones. Es un regalo 🎁 genuino para ti ♥️."
     },
     {
       // EDITABLE: Pregunta 2
@@ -22,37 +22,31 @@ const FAQ = () => {
       // EDITABLE: Pregunta 3
       question: "¿Cuánto tiempo tarda en llegar el libro?",
       // EDITABLE: Respuesta 3 (tiempo de entrega)
-      answer: "Generalmente entre 5 a 10 días hábiles, dependiendo de tu ubicación en Chile. Te contactaremos si hay algún retraso."
+      answer: "Generalmente entre 5 a 10 días hábiles, dependiendo de tu ubicación en Chile."
     },
     {
       // EDITABLE: Pregunta 4
       question: "¿Puedo solicitar ambos libros?",
       // EDITABLE: Respuesta 4
-      answer: "Por ahora, para optimizar nuestros recursos, enviamos un libro por persona. Una vez que lo leas, puedes contactarnos para solicitar el segundo."
+      answer: "Por ahora, para optimizar nuestros recursos, enviamos un libro por persona. Una vez que lo leas, puedes contactarnos para solicitar el segundo 😉."
     },
     {
       // EDITABLE: Pregunta 5
-      question: "¿Qué pasa si no estoy en casa cuando llegue?",
-      // EDITABLE: Respuesta 5
-      answer: "El libro será entregado por correo postal, por lo que si no estás, quedará un aviso para que puedas retirarlo en la oficina de correos más cercana."
-    },
-    {
-      // EDITABLE: Pregunta 6
       question: "¿Necesito tener conocimientos bíblicos previos?",
-      // EDITABLE: Respuesta 6
+      // EDITABLE: Respuesta 5
       answer: "No es necesario. Ambos libros están escritos de manera clara y comprensible para cualquier persona, sin importar su trasfondo religioso."
     },
     {
       // EDITABLE: Pregunta 7
       question: "¿Qué denominación religiosa está detrás de esto?",
       // EDITABLE: Respuesta 7
-      answer: "No representamos ninguna denominación específica. Nuestro único objetivo es compartir esperanza y verdades bíblicas que trascienden las barreras denominacionales."
+      answer: "No representamos ninguna denominación específica. Te invitamos unicamente a la Fe en el Hijo de Dios 'Jesús'."
     },
     {
       // EDITABLE: Pregunta 8
       question: "¿Puedo regalar el libro a alguien más?",
       // EDITABLE: Respuesta 8
-      answer: "¡Por supuesto! Si conoces a alguien que podría beneficiarse, puedes llenar el formulario con sus datos (con su permiso) o pedirle que haga su propia solicitud."
+      answer: "¡Por supuesto! Si conoces a alguien que podría beneficiarse, puedes llenar el formulario con sus datos (con su permiso) o pedirle que haga su propia solicitud ☺️."
     },
     {
       // EDITABLE: Pregunta 9
@@ -60,12 +54,6 @@ const FAQ = () => {
       // EDITABLE: Respuesta 9
       answer: "Tus datos son completamente privados y solo se usan para el envío del libro. No los compartimos con terceros ni los usamos para otros fines."
     },
-    {
-      // EDITABLE: Pregunta 10
-      question: "¿Hay algún compromiso después de recibir el libro?",
-      // EDITABLE: Respuesta 10
-      answer: "Ningún compromiso. El libro es tuyo para siempre. Si decides contactarnos después de leerlo, será completamente voluntario de tu parte."
-    }
   ];
 
   const toggleFAQ = (index: number) => {
@@ -82,7 +70,7 @@ const FAQ = () => {
           </h2>
           {/* EDITABLE: Descripción de la sección */}
           <p className="text-xl font-source text-esperanza-600">
-            Resolvemos las dudas más comunes sobre nuestros libros gratuitos
+            Resolvemos las dudas para que recivas tu libro
           </p>
         </div>
 
