@@ -1,8 +1,16 @@
 import React from 'react';
+import { useState } from 'react';
 import { Star, Clock, Users, Lightbulb, PenLineIcon } from 'lucide-react';
 import LazyImage from './LazyImage';
+import ImageCarouselModal from './ImageCarouselModal';
 
 const AboutBooks = () => {
+  // Estado para controlar el modal de imágenes
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [modalImages, setModalImages] = useState<string[]>([]);
+  const [modalInitialIndex, setModalInitialIndex] = useState(0);
+  const [modalBookTitle, setModalBookTitle] = useState('');
+
   // EDITABLE: Información de los libros
   const books = [
     {
@@ -19,8 +27,12 @@ const AboutBooks = () => {
       ],
       icon: <PenLineIcon className="h-8 w-8 text-dorado-500" />,
       gradient: "from-dorado-50 to-dorado-100",
-      // Imagen del libro (opcional)
-      image: "https://images.pexels.com/photos/32897511/pexels-photo-32897511.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop"
+      // EDITABLE: Imágenes del libro - Array de URLs para el carrusel
+      images: [
+        "https://images.pexels.com/photos/32897511/pexels-photo-32897511.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
+        "https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
+        "https://images.pexels.com/photos/1112048/pexels-photo-1112048.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"  // Imagen conceptual 2
+      ]
     },
     {
       // EDITABLE: Título del segundo libro
@@ -35,12 +47,33 @@ const AboutBooks = () => {
       ],
       icon: <PenLineIcon className="h-8 w-8 text-celestial-500" />,
       gradient: "from-celestial-50 to-celestial-100",
-      // Imagen del libro (opcional)
-      image: "https://images.pexels.com/photos/32897639/pexels-photo-32897639.jpeg?auto=compress&cs=tinysrgb&w=300&h=400&fit=crop"
+      // EDITABLE: Imágenes del libro - Array de URLs para el carrusel
+      images: [
+        "https://images.pexels.com/photos/32897639/pexels-photo-32897639.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
+        "https://images.pexels.com/photos/1112048/pexels-photo-1112048.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
+        "https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"  // Imagen conceptual 2
+      ]
     }
   ];
 
+  // Función para abrir el modal de imágenes
+  const openImageModal = (images: string[], initialIndex: number, bookTitle: string) => {
+    setModalImages(images);
+    setModalInitialIndex(initialIndex);
+    setModalBookTitle(bookTitle);
+    setIsModalOpen(true);
+  };
+
+  // Función para cerrar el modal
+  const closeImageModal = () => {
+    setIsModalOpen(false);
+    setModalImages([]);
+    setModalInitialIndex(0);
+    setModalBookTitle('');
+  };
+
   return (
+    <>
     <section id="libros" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
@@ -61,15 +94,30 @@ const AboutBooks = () => {
               key={index}
               className={`card-celestial bg-gradient-to-br ${book.gradient} p-8 rounded-2xl hover:scale-105`}
             >
-              {/* Imagen del libro con lazy loading */}
-              {book.image && (
+              {/* Imagen del libro con lazy loading y funcionalidad de modal */}
+              {book.images && book.images.length > 0 && (
                 <div className="mb-6 flex justify-center">
-                  <div className="w-32 h-40 rounded-lg overflow-hidden shadow-lg">
+                  <div 
+                    className="w-32 h-40 rounded-lg overflow-hidden shadow-lg cursor-pointer transform transition-all duration-300 hover:scale-105 hover:shadow-xl group relative"
+                    onClick={() => openImageModal(book.images, 0, book.title)}
+                  >
                     <LazyImage
-                      src={book.image}
+                      src={book.images[0]}
                       alt={`Portada del libro ${book.title}`}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                     />
+                    {/* Overlay con indicador de clic */}
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-all duration-300 flex items-center justify-center">
+                      <div className="opacity-0 group-hover:opacity-100 transition-opacity duration-300 bg-white/90 backdrop-blur-sm rounded-full p-2">
+                        <span className="text-xs font-source font-semibold text-esperanza-800">Ver detalles</span>
+                      </div>
+                    </div>
+                    {/* Indicador de múltiples imágenes */}
+                    {book.images.length > 1 && (
+                      <div className="absolute bottom-2 right-2 bg-black/70 text-white text-xs px-2 py-1 rounded-full font-source">
+                        +{book.images.length - 1}
+                      </div>
+                    )}
                   </div>
                 </div>
               )}
@@ -115,6 +163,16 @@ const AboutBooks = () => {
       </div>
     </section>
   );
+    {/* Modal de carrusel de imágenes */}
+    {isModalOpen && (
+      <ImageCarouselModal
+        images={modalImages}
+        initialIndex={modalInitialIndex}
+        onClose={closeImageModal}
+        bookTitle={modalBookTitle}
+      />
+    )}
+    </>
 };
 
 export default AboutBooks;
