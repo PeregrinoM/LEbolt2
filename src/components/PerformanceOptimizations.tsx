@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef, useCallback } from 'react';
-import { Wifi, WifiOff, Zap, Download } from 'lucide-react';
+import { Wifi, WifiOff } from 'lucide-react';
 
 // 6. Lazy loading inteligente para imágenes
 export const LazyImage = ({ 
@@ -148,74 +148,6 @@ export const ConnectionSpeedDetector = () => {
   return null;
 };
 
-// 8. Modo de ahorro de datos
-export const DataSaverMode = () => {
-  const [dataSaverEnabled, setDataSaverEnabled] = useState(false);
-  const [dataSaved, setDataSaved] = useState(0);
-
-  useEffect(() => {
-    // Detectar si el usuario tiene activado el ahorro de datos
-    const connection = (navigator as any).connection || (navigator as any).mozConnection || (navigator as any).webkitConnection;
-    
-    if (connection && connection.saveData) {
-      setDataSaverEnabled(true);
-    }
-  }, []);
-
-  const enableDataSaver = () => {
-    setDataSaverEnabled(true);
-    // Aquí implementarías la lógica para reducir la calidad de imágenes, etc.
-    setDataSaved(prev => prev + 1.2); // MB ahorrados simulados
-  };
-
-  const disableDataSaver = () => {
-    setDataSaverEnabled(false);
-  };
-
-  return (
-    <div className="md:hidden">
-      {!dataSaverEnabled ? (
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-4 mb-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <Download className="h-5 w-5 text-blue-500 mr-3" />
-              <div>
-                <p className="font-poppins font-semibold text-blue-800">Modo ahorro de datos</p>
-                <p className="text-sm font-source text-blue-600">Reduce el uso de datos móviles</p>
-              </div>
-            </div>
-            <button
-              onClick={enableDataSaver}
-              className="bg-blue-500 text-white px-4 py-2 rounded-lg font-source font-semibold hover:bg-blue-600 transition-colors duration-200"
-            >
-              Activar
-            </button>
-          </div>
-        </div>
-      ) : (
-        <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-6">
-          <div className="flex items-center justify-between">
-            <div className="flex items-center">
-              <Zap className="h-5 w-5 text-green-500 mr-3" />
-              <div>
-                <p className="font-poppins font-semibold text-green-800">Ahorro de datos activo</p>
-                <p className="text-sm font-source text-green-600">
-                  Has ahorrado ~{dataSaved.toFixed(1)} MB
-                </p>
-              </div>
-            </div>
-            <button
-              onClick={disableDataSaver}
-              className="text-green-600 hover:text-green-700 font-source font-semibold"
-            >
-              Desactivar
-            </button>
-          </div>
-        </div>
-      )}
-    </div>
-  );
-};
 
 // 9. Precarga inteligente de contenido
 export const IntelligentPreloader = () => {

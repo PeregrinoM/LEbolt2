@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 // Importar optimizaciones móviles
 import { FloatingActionButton, ConnectionIndicator } from './components/MobileOptimizations';
-import { ConnectionSpeedDetector, DataSaverMode } from './components/PerformanceOptimizations';
+import { ConnectionSpeedDetector } from './components/PerformanceOptimizations';
 import IntelligentPreloader from './components/IntelligentPreloader';
 
 function App() {
@@ -27,11 +27,6 @@ function App() {
       <AboutBooks />
       <Process />
       <Testimonials />
-      
-      {/* Modo ahorro de datos solo en móvil */}
-      <div className="px-4 sm:px-6 lg:px-8">
-        <DataSaverMode />
-      </div>
       
       <RequestForm />
       <FAQ />
