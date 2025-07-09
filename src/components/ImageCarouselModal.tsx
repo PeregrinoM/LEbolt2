@@ -199,19 +199,11 @@ const ImageCarouselModal: React.FC<ImageCarouselModalProps> = ({
         {/* Instrucciones de uso */}
         <div className="mt-4 text-center text-white/70">
           <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 text-sm font-source">
-            <span className="flex items-center space-x-1">
-              <span>🖱️</span>
-              <span>Clic para hacer zoom</span>
-            </span>
             {images.length > 1 && (
               <>
                 <span className="flex items-center space-x-1">
                   <span>👈👉</span>
                   <span>Desliza para navegar</span>
-                </span>
-                <span className="flex items-center space-x-1">
-                  <span>⌨️</span>
-                  <span>Usa las flechas del teclado</span>
                 </span>
               </>
             )}

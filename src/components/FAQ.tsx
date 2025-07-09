@@ -22,7 +22,7 @@ const FAQ = () => {
       // EDITABLE: Pregunta 3
       question: "¿Cuánto tiempo tarda en llegar el libro?",
       // EDITABLE: Respuesta 3 (tiempo de entrega)
-      answer: "Generalmente entre 5 a 10 días hábiles, dependiendo de tu ubicación en Chile."
+      answer: "Generalmente entre 5 a 10 días hábiles, dependiendo de tu ubicación 📍 en Chile."
     },
     {
       // EDITABLE: Pregunta 4
@@ -34,7 +34,7 @@ const FAQ = () => {
       // EDITABLE: Pregunta 5
       question: "¿Necesito tener conocimientos bíblicos previos?",
       // EDITABLE: Respuesta 5
-      answer: "No es necesario. Ambos libros están escritos de manera clara y comprensible para cualquier persona, sin importar su trasfondo religioso."
+      answer: "No es necesario. Ambos libros 📙 están escritos de manera clara y comprensible para cualquier persona, sin importar su trasfondo religioso."
     },
     {
       // EDITABLE: Pregunta 7
@@ -52,7 +52,7 @@ const FAQ = () => {
       // EDITABLE: Pregunta 9
       question: "¿Qué pasa con mis datos personales?",
       // EDITABLE: Respuesta 9
-      answer: "Tus datos son completamente privados y solo se usan para el envío del libro. No los compartimos con terceros ni los usamos para otros fines."
+      answer: "Tus datos son completamente privados 🔒 y solo son para el envío del libro. No los compartimos con nadie ni los usamos para otros fines."
     },
   ];
 
@@ -63,14 +63,14 @@ const FAQ = () => {
   return (
     <section id="preguntas" className="py-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8">
           {/* EDITABLE: Título de la sección */}
           <h2 className="text-3xl md:text-4xl font-poppins font-bold text-esperanza-800 mb-4">
             Preguntas Frecuentes
           </h2>
           {/* EDITABLE: Descripción de la sección */}
           <p className="text-xl font-source text-esperanza-600">
-            Resolvemos las dudas para que recivas tu libro
+            Resolvemos las dudas para que recivas tu libro.
           </p>
         </div>
 
@@ -115,7 +115,7 @@ const FAQ = () => {
             </h3>
             {/* EDITABLE: Descripción de la llamada a la acción */}
             <p className="font-source text-esperanza-700 mb-6">
-              No dudes en contactarnos. Estamos aquí para ayudarte en tu búsqueda espiritual.
+              No dudes en contactarnos, para eso estamos aquí.
             </p>
             {/* EDITABLE: Texto del botón */}
             <button

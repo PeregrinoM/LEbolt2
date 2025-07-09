@@ -220,13 +220,13 @@ const RequestForm = () => {
             <div className="bg-green-100 border border-green-200 rounded-xl p-6 mb-6">
               <h3 className="font-poppins font-semibold text-green-800 mb-2">Próximos pasos:</h3>
               <ul className="text-sm font-source text-green-700 space-y-1">
-                <li>• Verificaremos tu información en 24 horas</li>
+                <li>• Verificaremos tu información en 24-48 horas</li>
                 <li>• Tu libro será enviado en 3-5 días hábiles</li>
-                <li>• Recibirás un email de confirmación</li>
+                <li>• Recibirás un mensaje de confirmación</li>
               </ul>
             </div>
             <p className="text-sm font-source text-esperanza-500">
-              Te contactaremos si necesitamos confirmar algún dato del envío.
+              Te contactaremos solo si necesitamos corroborar algún dato del envío.
             </p>
           </div>
         </div>

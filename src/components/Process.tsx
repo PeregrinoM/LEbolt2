@@ -56,7 +56,7 @@ const Process = () => {
           </h2>
           {/* EDITABLE: Descripción de la sección */}
           <p className="text-xl font-source text-esperanza-600 max-w-3xl mx-auto">
-            Un proceso simple, transparente y seguro para que recibas tu libro de esperanza
+            Simple, transparente y seguro para que recibas tu libro de esperanza.
           </p>
         </div>
 

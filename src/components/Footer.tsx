@@ -18,13 +18,13 @@ const Footer = () => {
             {/* EDITABLE: Descripción de la organización */}
             <p className="font-source text-gray-300 leading-relaxed mb-4">
               Compartiendo esperanza y transformación a través de libros que han 
-              iluminado millones de vidas durante más de 150 años. Completamente 
-              gratuito, enviado con amor.
+              iluminado millones de vidas. Completamente 
+              gratuito.
             </p>
             <div className="flex items-center text-gray-300">
               <Heart className="h-4 w-4 text-red-400 mr-2" />
               {/* EDITABLE: Mensaje de ubicación */}
-              <span className="text-sm font-source">Hecho con amor para Chile</span>
+              <span className="text-sm font-source">Hecho y enviado con amor.</span>
             </div>
           </div>
 
@@ -100,7 +100,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="font-source text-gray-400 text-sm mb-4 md:mb-0">
               {/* EDITABLE: Texto de copyright */}
-              © {currentYear} Libros de Esperanza. Todos los derechos reservados.
+              © {currentYear} Libros de Esperanza. Todos los derechos liberados.
             </div>
             <div className="font-source text-gray-400 text-sm">
               {/* EDITABLE: Enlaces legales y país */}
@@ -113,8 +113,7 @@ const Footer = () => {
         <div className="mt-6 text-center">
           {/* EDITABLE: Versículo bíblico o cita inspiracional */}
           <p className="font-source text-gray-400 text-sm italic">
-            "Porque yo sé los pensamientos que tengo acerca de vosotros, dice Jehová, 
-            pensamientos de paz, y no de mal, para daros el fin que esperáis." - Jeremías 29:11
+            "Dejen todas sus preocupaciones a Dios, porque él se interesa por ustedes." - 1 Pedro 5:7
           </p>
         </div>
       </div>
