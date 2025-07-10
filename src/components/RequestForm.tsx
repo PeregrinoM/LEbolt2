@@ -2,6 +2,32 @@ import React, { useState, useEffect } from 'react';
 import { Send, CheckCircle, AlertCircle, Shield, Lock, Eye, EyeOff, MapPin, Phone, Mail, User } from 'lucide-react';
 
 const RequestForm = () => {
+  // ========================================
+  // CONFIGURACIÓN DE GOOGLE FORMS
+  // ========================================
+  
+  // URL base del Google Form - Esta es la URL que obtuviste de tu Google Form
+  // Se cambia 'viewform' por 'formResponse' para poder enviar datos programáticamente
+  const GOOGLE_FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSeaUSMzf7MgNDvCDxd0AiG2taHJ0vgqMqQUr8K4tdi7aIvtgQ/formResponse';
+  
+  // Mapeo de campos del formulario React a los Entry IDs de Google Forms
+  // Cada 'entry.xxxxxxxxx' corresponde a un campo específico en tu Google Form
+  const GOOGLE_FORM_ENTRIES = {
+    nombre: 'entry.1332185571',        // Campo "Nombre completo" en Google Form
+    telefono: 'entry.1690264956',      // Campo "Teléfono" en Google Form
+    email: 'entry.300744122',          // Campo "Email" en Google Form
+    direccion: 'entry.903982352',      // Campo "Dirección" en Google Form
+    ciudad: 'entry.478564157',         // Campo "Ciudad" en Google Form
+    libro: 'entry.1414741161',         // Campo "Libro seleccionado" en Google Form
+    motivacion: 'entry.402275698',     // Campo "Motivación" en Google Form
+    mensajeAdicional: 'entry.382189544', // Campo "Mensaje adicional" en Google Form
+    estudioBiblico: 'entry.644547640'  // Campo "Estudio bíblico" en Google Form
+  };
+
+  // ========================================
+  // ESTADO DEL COMPONENTE
+  // ========================================
+  
   const [formData, setFormData] = useState({
     nombre: '',
     direccion: '',
@@ -49,6 +75,10 @@ const RequestForm = () => {
     'Guía para tiempos difíciles',
   ];
 
+  // ========================================
+  // FUNCIONES DE VALIDACIÓN
+  // ========================================
+  
   // Validación en tiempo real
   const validateField = (name: string, value: string | string[]) => {
     let isValid = false;
@@ -98,6 +128,10 @@ const RequestForm = () => {
     setFormProgress(progress);
   }, [validation]);
 
+  // ========================================
+  // MANEJADORES DE EVENTOS
+  // ========================================
+  
   const handleInputChange = (name: string, value: string | string[]) => {
     setFormData(prev => ({ ...prev, [name]: value }));
     
@@ -131,45 +165,122 @@ const RequestForm = () => {
     setCiudadSuggestions([]);
   };
 
+  // ========================================
+  // FUNCIÓN PRINCIPAL DE ENVÍO A GOOGLE FORMS
+  // ========================================
+  
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
 
-    // Validar todos los campos requeridos
+    // PASO 1: Validar todos los campos requeridos antes del envío
     const requiredFields = ['nombre', 'telefono', 'email', 'direccion', 'ciudad', 'libro', 'motivacion'];
     const allValid = requiredFields.every(field => validation[field as keyof typeof validation]?.isValid);
 
     if (!allValid || !formData.terminos) {
+      console.log('❌ Validación fallida - Campos incompletos o términos no aceptados');
       setSubmitStatus('error');
       setIsSubmitting(false);
       return;
     }
 
     try {
-      // Aquí se integrará con Google Forms
-      // El formulario está estructurado para ser compatible con Google Forms
-      const formDataForGoogle = {
-        'entry.nombre': formData.nombre,
-        'entry.telefono': formData.telefono,
-        'entry.email': formData.email,
-        'entry.direccion': formData.direccion,
-        'entry.ciudad': formData.ciudad,
-        'entry.libro': formData.libro,
-        'entry.motivacion': formData.motivacion.join(', '),
-        'entry.mensaje': formData.mensajeAdicional,
-        'entry.estudio': formData.estudioBiblico
-      };
+      // PASO 2: Preparar los datos para Google Forms
+      // Creamos un objeto FormData que es el formato que espera Google Forms
+      const formDataForGoogle = new FormData();
+      
+      // PASO 3: Mapear cada campo de nuestro formulario React a los Entry IDs de Google Forms
+      // Cada append() añade un campo al FormData usando el Entry ID como clave
+      
+      console.log('📝 Preparando datos para Google Forms...');
+      
+      // Campo nombre -> entry.1332185571
+      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.nombre, formData.nombre);
+      console.log(`✓ Nombre: ${formData.nombre}`);
+      
+      // Campo teléfono -> entry.1690264956
+      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.telefono, formData.telefono);
+      console.log(`✓ Teléfono: ${formData.telefono}`);
+      
+      // Campo email -> entry.300744122
+      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.email, formData.email);
+      console.log(`✓ Email: ${formData.email}`);
+      
+      // Campo dirección -> entry.903982352
+      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.direccion, formData.direccion);
+      console.log(`✓ Dirección: ${formData.direccion}`);
+      
+      // Campo ciudad -> entry.478564157
+      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.ciudad, formData.ciudad);
+      console.log(`✓ Ciudad: ${formData.ciudad}`);
+      
+      // Campo libro -> entry.1414741161
+      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.libro, formData.libro);
+      console.log(`✓ Libro: ${formData.libro}`);
+      
+      // Campo motivación -> entry.402275698
+      // Las motivaciones se unen con comas porque es un campo de texto en Google Forms
+      const motivacionesTexto = formData.motivacion.join(', ');
+      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.motivacion, motivacionesTexto);
+      console.log(`✓ Motivaciones: ${motivacionesTexto}`);
+      
+      // Campo mensaje adicional -> entry.382189544
+      // Si no hay mensaje, enviamos una cadena vacía
+      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.mensajeAdicional, formData.mensajeAdicional || '');
+      console.log(`✓ Mensaje adicional: ${formData.mensajeAdicional || '(vacío)'}`);
+      
+      // Campo estudio bíblico -> entry.644547640
+      // Si no se seleccionó nada, enviamos una cadena vacía
+      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.estudioBiblico, formData.estudioBiblico || '');
+      console.log(`✓ Estudio bíblico: ${formData.estudioBiblico || '(no especificado)'}`);
 
-      // Simular envío del formulario
-      await new Promise(resolve => setTimeout(resolve, 2000));
+      // PASO 4: Enviar los datos a Google Forms
+      console.log('🚀 Enviando datos a Google Forms...');
+      console.log(`📍 URL destino: ${GOOGLE_FORM_URL}`);
+      
+      const response = await fetch(GOOGLE_FORM_URL, {
+        method: 'POST',
+        // mode: 'no-cors' es CRUCIAL para evitar errores de CORS con Google Forms
+        // Esto significa que no podremos leer la respuesta, pero el envío funcionará
+        mode: 'no-cors',
+        body: formDataForGoogle
+      });
+
+      // PASO 5: Manejar la respuesta
+      // Nota: Con mode: 'no-cors', no podemos verificar si el envío fue exitoso
+      // pero si llegamos aquí sin errores, probablemente funcionó
+      console.log('✅ Datos enviados a Google Forms');
+      console.log('ℹ️ Nota: Con mode no-cors no podemos verificar la respuesta del servidor');
+      
+      // Marcar como exitoso
       setSubmitStatus('success');
+      
+      // Log para debugging - estos datos deberían aparecer en tu Google Form
+      console.log('📊 Resumen de datos enviados:');
+      console.log('- Nombre:', formData.nombre);
+      console.log('- Teléfono:', formData.telefono);
+      console.log('- Email:', formData.email);
+      console.log('- Dirección:', formData.direccion);
+      console.log('- Ciudad:', formData.ciudad);
+      console.log('- Libro:', formData.libro);
+      console.log('- Motivaciones:', formData.motivacion);
+      console.log('- Mensaje:', formData.mensajeAdicional);
+      console.log('- Estudio bíblico:', formData.estudioBiblico);
+      
     } catch (error) {
+      // PASO 6: Manejar errores
+      console.error('❌ Error al enviar a Google Forms:', error);
       setSubmitStatus('error');
     } finally {
+      // PASO 7: Limpiar estado de carga
       setIsSubmitting(false);
     }
   };
 
+  // ========================================
+  // FUNCIONES AUXILIARES PARA LA UI
+  // ========================================
+  
   const getFieldIcon = (fieldName: string) => {
     const icons = {
       nombre: <User className="h-5 w-5" />,
@@ -201,6 +312,10 @@ const RequestForm = () => {
     }
   };
 
+  // ========================================
+  // RENDERIZADO CONDICIONAL - ÉXITO
+  // ========================================
+  
   if (submitStatus === 'success') {
     return (
       <section id="solicitar" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-green-50 to-celestial-50">
@@ -231,6 +346,10 @@ const RequestForm = () => {
     );
   }
 
+  // ========================================
+  // RENDERIZADO PRINCIPAL DEL FORMULARIO
+  // ========================================
+  
   return (
     <section id="solicitar" className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-celestial-50 to-dorado-50">
       <div className="max-w-4xl mx-auto">
