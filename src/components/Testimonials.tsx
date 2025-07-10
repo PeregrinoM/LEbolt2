@@ -294,13 +294,12 @@ const Testimonials = () => {
         </div>
 
         <div className="text-center">
-          <div className="bg-gradient-dorado p-10 rounded-2xl border border-dorado-200 max-w-4xl mx-auto">
+          <div className="bg-gradient-dorado p-8 rounded-2xl border border-dorado-200 max-w-4xl mx-auto">
             <h3 className="text-3xl font-poppins font-bold text-esperanza-800 mb-6">
-              ¿Serás el próximo testimonio?
+              Ten Fé 🙏🏻
             </h3>
             <p className="font-source text-esperanza-700 text-xl leading-relaxed">
-              Miles de personas han encontrado esperanza, paz y propósito. 
-              Tu historia de transformación puede ser la siguiente.
+              No dejes pasar las oportunidades de encontrar aquello que estas buscando.
             </p>
           </div>
         </div>

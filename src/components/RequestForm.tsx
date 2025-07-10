@@ -42,14 +42,11 @@ const RequestForm = () => {
   ];
 
   const motivaciones = [
-    'Crecimiento espiritual personal',
     'Búsqueda de esperanza y paz',
-    'Estudio bíblico profundo',
+    'Estudio bíblico',
     'Comprensión de profecías',
-    'Fortalecimiento de la fe',
     'Respuestas a preguntas existenciales',
     'Guía para tiempos difíciles',
-    'Transformación de vida'
   ];
 
   // Validación en tiempo real
@@ -73,8 +70,8 @@ const RequestForm = () => {
         message = isValid ? '✓ Email válido' : 'Ingresa un email válido';
         break;
       case 'direccion':
-        isValid = typeof value === 'string' && value.length >= 10;
-        message = isValid ? '✓ Dirección válida' : 'Ingresa tu dirección completa (mín. 10 caracteres)';
+        isValid = typeof value === 'string' && value.length >= 5;
+        message = isValid ? '✓ Dirección válida' : 'Ingresa tu dirección completa (mín. 5 caracteres)';
         break;
       case 'ciudad':
         isValid = typeof value === 'string' && value.length >= 2;
@@ -277,7 +274,7 @@ const RequestForm = () => {
             </div>
             <div className="flex items-center text-dorado-600">
               <CheckCircle className="h-5 w-5 mr-2" />
-              <span className="font-source font-semibold">Sin spam garantizado</span>
+              <span className="font-source font-semibold">Sin publicidad </span>
             </div>
           </div>
 
@@ -285,7 +282,7 @@ const RequestForm = () => {
             {/* Datos Personales */}
             <div className="space-y-6">
               <h3 className="text-2xl font-poppins font-bold text-esperanza-800 border-b border-celestial-200 pb-3">
-                📋 Datos Personales
+                📋 Datos de Envio
               </h3>
               
               <div className="grid md:grid-cols-2 gap-6">
@@ -472,7 +469,7 @@ const RequestForm = () => {
                   />
                   <div>
                     <h4 className="font-poppins font-semibold text-esperanza-800 text-lg">El Conflicto de los Siglos</h4>
-                    <p className="text-sm font-source text-esperanza-600">Historia profética y esperanza eterna</p>
+                    <p className="text-sm font-source text-esperanza-600">Historia profética y Fé en Dios.</p>
                   </div>
                 </label>
                 
@@ -491,7 +488,7 @@ const RequestForm = () => {
                   />
                   <div>
                     <h4 className="font-poppins font-semibold text-esperanza-800 text-lg">El Camino a Cristo</h4>
-                    <p className="text-sm font-source text-esperanza-600">Pasos hacia la salvación y paz interior</p>
+                    <p className="text-sm font-source text-esperanza-600">Pasos hacia la salvación y paz.</p>
                   </div>
                 </label>
               </div>
