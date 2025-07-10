@@ -12,14 +12,15 @@ const RequestForm = () => {
   
   // Mapeo de campos del formulario React a los Entry IDs de Google Forms
   // Cada 'entry.xxxxxxxxx' corresponde a un campo específico en tu Google Form
+  // IMPORTANTE: Estos Entry IDs fueron extraídos de la URL de prueba que proporcionaste
   const GOOGLE_FORM_ENTRIES = {
     nombre: 'entry.1332185571',        // Campo "Nombre completo" en Google Form
+    direccion: 'entry.903982352',      // Campo "Dirección" en Google Form  
+    ciudad: 'entry.478564157',         // Campo "Ciudad" en Google Form
     telefono: 'entry.1690264956',      // Campo "Teléfono" en Google Form
     email: 'entry.300744122',          // Campo "Email" en Google Form
-    direccion: 'entry.903982352',      // Campo "Dirección" en Google Form
-    ciudad: 'entry.478564157',         // Campo "Ciudad" en Google Form
     libro: 'entry.1414741161',         // Campo "Libro seleccionado" en Google Form
-    motivacion: 'entry.402275698',     // Campo "Motivación" en Google Form
+    motivacion: 'entry.402275698',     // Campo "Motivación" en Google Form (múltiples valores)
     mensajeAdicional: 'entry.382189544', // Campo "Mensaje adicional" en Google Form
     estudioBiblico: 'entry.644547640'  // Campo "Estudio bíblico" en Google Form
   };
@@ -35,7 +36,7 @@ const RequestForm = () => {
     telefono: '',
     email: '',
     libro: '',
-    motivacion: [],
+    motivacion: [] as string[], // Array para múltiples selecciones
     mensajeAdicional: '',
     estudioBiblico: '',
     terminos: false
@@ -53,8 +54,6 @@ const RequestForm = () => {
 
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [submitStatus, setSubmitStatus] = useState('');
-  const [currentStep, setCurrentStep] = useState(1);
-  const [showPassword, setShowPassword] = useState(false);
   const [ciudadSuggestions, setCiudadSuggestions] = useState<string[]>([]);
   const [formProgress, setFormProgress] = useState(0);
 
@@ -67,6 +66,7 @@ const RequestForm = () => {
     'San Antonio', 'Curicó', 'Linares', 'Ovalle', 'Melipilla'
   ];
 
+  // Opciones de motivación - DEBEN coincidir exactamente con las opciones en Google Forms
   const motivaciones = [
     'Búsqueda de esperanza y paz',
     'Estudio bíblico',
@@ -198,14 +198,6 @@ const RequestForm = () => {
       formDataForGoogle.append(GOOGLE_FORM_ENTRIES.nombre, formData.nombre);
       console.log(`✓ Nombre: ${formData.nombre}`);
       
-      // Campo teléfono -> entry.1690264956
-      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.telefono, formData.telefono);
-      console.log(`✓ Teléfono: ${formData.telefono}`);
-      
-      // Campo email -> entry.300744122
-      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.email, formData.email);
-      console.log(`✓ Email: ${formData.email}`);
-      
       // Campo dirección -> entry.903982352
       formDataForGoogle.append(GOOGLE_FORM_ENTRIES.direccion, formData.direccion);
       console.log(`✓ Dirección: ${formData.direccion}`);
@@ -214,15 +206,25 @@ const RequestForm = () => {
       formDataForGoogle.append(GOOGLE_FORM_ENTRIES.ciudad, formData.ciudad);
       console.log(`✓ Ciudad: ${formData.ciudad}`);
       
+      // Campo teléfono -> entry.1690264956
+      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.telefono, formData.telefono);
+      console.log(`✓ Teléfono: ${formData.telefono}`);
+      
+      // Campo email -> entry.300744122
+      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.email, formData.email);
+      console.log(`✓ Email: ${formData.email}`);
+      
       // Campo libro -> entry.1414741161
       formDataForGoogle.append(GOOGLE_FORM_ENTRIES.libro, formData.libro);
       console.log(`✓ Libro: ${formData.libro}`);
       
       // Campo motivación -> entry.402275698
-      // Las motivaciones se unen con comas porque es un campo de texto en Google Forms
-      const motivacionesTexto = formData.motivacion.join(', ');
-      formDataForGoogle.append(GOOGLE_FORM_ENTRIES.motivacion, motivacionesTexto);
-      console.log(`✓ Motivaciones: ${motivacionesTexto}`);
+      // IMPORTANTE: Para campos de múltiple selección en Google Forms,
+      // necesitamos enviar cada valor por separado con el mismo entry ID
+      formData.motivacion.forEach(motivacion => {
+        formDataForGoogle.append(GOOGLE_FORM_ENTRIES.motivacion, motivacion);
+      });
+      console.log(`✓ Motivaciones: ${formData.motivacion.join(', ')}`);
       
       // Campo mensaje adicional -> entry.382189544
       // Si no hay mensaje, enviamos una cadena vacía
@@ -258,10 +260,10 @@ const RequestForm = () => {
       // Log para debugging - estos datos deberían aparecer en tu Google Form
       console.log('📊 Resumen de datos enviados:');
       console.log('- Nombre:', formData.nombre);
-      console.log('- Teléfono:', formData.telefono);
-      console.log('- Email:', formData.email);
       console.log('- Dirección:', formData.direccion);
       console.log('- Ciudad:', formData.ciudad);
+      console.log('- Teléfono:', formData.telefono);
+      console.log('- Email:', formData.email);
       console.log('- Libro:', formData.libro);
       console.log('- Motivaciones:', formData.motivacion);
       console.log('- Mensaje:', formData.mensajeAdicional);
@@ -393,7 +395,7 @@ const RequestForm = () => {
             </div>
             <div className="flex items-center text-dorado-600">
               <CheckCircle className="h-5 w-5 mr-2" />
-              <span className="font-source font-semibold">Sin publicidad </span>
+              <span className="font-source font-semibold">Sin publicidad</span>
             </div>
           </div>
 
@@ -401,7 +403,7 @@ const RequestForm = () => {
             {/* Datos Personales */}
             <div className="space-y-6">
               <h3 className="text-2xl font-poppins font-bold text-esperanza-800 border-b border-celestial-200 pb-3">
-                📋 Datos de Envio
+                📋 Datos de Envío
               </h3>
               
               <div className="grid md:grid-cols-2 gap-6">
@@ -588,7 +590,7 @@ const RequestForm = () => {
                   />
                   <div>
                     <h4 className="font-poppins font-semibold text-esperanza-800 text-lg">El Conflicto de los Siglos</h4>
-                    <p className="text-sm font-source text-esperanza-600">Historia profética y Fé en Dios.</p>
+                    <p className="text-sm font-source text-esperanza-600">Historia profética y Fe en Dios.</p>
                   </div>
                 </label>
                 
@@ -676,8 +678,8 @@ const RequestForm = () => {
                   <input
                     type="radio"
                     name="estudioBiblico"
-                    value="Sí"
-                    checked={formData.estudioBiblico === 'Sí'}
+                    value="si"
+                    checked={formData.estudioBiblico === 'si'}
                     onChange={(e) => setFormData(prev => ({ ...prev, estudioBiblico: e.target.value }))}
                     className="mr-3 w-5 h-5"
                   />
@@ -687,8 +689,8 @@ const RequestForm = () => {
                   <input
                     type="radio"
                     name="estudioBiblico"
-                    value="No"
-                    checked={formData.estudioBiblico === 'No'}
+                    value="no"
+                    checked={formData.estudioBiblico === 'no'}
                     onChange={(e) => setFormData(prev => ({ ...prev, estudioBiblico: e.target.value }))}
                     className="mr-3 w-5 h-5"
                   />
