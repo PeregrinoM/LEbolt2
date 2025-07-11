@@ -700,6 +700,7 @@ const RequestForm = () => {
             </div>
 
             {/* Términos */}
+          <div className="flex items-start mobile-touch-target">
             <label className="flex items-start cursor-pointer text-sm font-source text-esperanza-600 select-none">
               <input
                 type="checkbox"
