@@ -708,21 +708,8 @@ const RequestForm = () => {
                 checked={formData.terminos}
                 onChange={(e) => setFormData(prev => ({ ...prev, terminos: e.target.checked }))}
                 className="mt-1 mr-4 w-5 h-5"
-                tabIndex={0}
               />
-              <span
-                onClick={() => setFormData(prev => ({ ...prev, terminos: !prev.terminos }))}
-                onKeyDown={e => {
-                  if (e.key === 'Enter' || e.key === ' ') {
-                    setFormData(prev => ({ ...prev, terminos: !prev.terminos }));
-                  }
-                }}
-                role="checkbox"
-                aria-checked={formData.terminos}
-                tabIndex={0}
-                className="text-sm font-source text-esperanza-600 outline-none"
-                style={{ userSelect: 'none' }}
-              >
+              <span className="text-sm font-source text-esperanza-600">
                 Acepto que mis datos sean utilizados únicamente para el envío del libro solicitado. 
                 No compartiremos tu información con terceros. *
               </span>
