@@ -700,21 +700,35 @@ const RequestForm = () => {
             </div>
 
             {/* Términos */}
-            <div className="flex items-start mobile-touch-target">
+            <label className="flex items-start cursor-pointer text-sm font-source text-esperanza-600 select-none">
               <input
                 type="checkbox"
                 required
                 checked={formData.terminos}
                 onChange={(e) => setFormData(prev => ({ ...prev, terminos: e.target.checked }))}
                 className="mt-1 mr-4 w-5 h-5"
+                tabIndex={0}
               />
-              <label className="text-sm font-source text-esperanza-600">
+              <span
+                onClick={() => setFormData(prev => ({ ...prev, terminos: !prev.terminos }))}
+                onKeyDown={e => {
+                  if (e.key === 'Enter' || e.key === ' ') {
+                    setFormData(prev => ({ ...prev, terminos: !prev.terminos }));
+                  }
+                }}
+                role="checkbox"
+                aria-checked={formData.terminos}
+                tabIndex={0}
+                className="text-sm font-source text-esperanza-600 outline-none"
+                style={{ userSelect: 'none' }}
+              >
                 Acepto que mis datos sean utilizados únicamente para el envío del libro solicitado. 
                 No compartiremos tu información con terceros. *
-              </label>
-            </div>
+              </span>
+            </label>
+          </div>
 
-            {submitStatus === 'error' && (
+          {submitStatus === 'error' && (
               <div className="flex items-center p-6 bg-red-50 border border-red-200 rounded-xl">
                 <AlertCircle className="h-6 w-6 text-red-500 mr-3" />
                 <span className="font-source text-red-700">Hubo un error al enviar tu solicitud. Por favor, revisa los campos marcados e intenta nuevamente.</span>
