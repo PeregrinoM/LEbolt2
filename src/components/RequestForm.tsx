@@ -276,6 +276,16 @@ const RequestForm = () => {
     } finally {
       // PASO 7: Limpiar estado de carga
       setIsSubmitting(false);
+      
+      // PASO 8: Scroll suave al inicio de la sección para mostrar el mensaje de éxito
+      if (submitStatus !== 'error') {
+        setTimeout(() => {
+          const element = document.getElementById('solicitar');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      }
     }
   };
 
