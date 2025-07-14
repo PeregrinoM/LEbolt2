@@ -134,7 +134,7 @@ const RequestForm = () => {
       // Velocidad inicial de las partículas.
       startVelocity: 30, // EDITABLE: Velocidad inicial (ej: 20-40)
       // Decaimiento de la velocidad. Cuanto más cerca de 1, más lento caen.
-      decay: 0.9, // EDITABLE: Velocidad de caída (ej: 0.85-0.95)
+      decay: 0.95, // EDITABLE: Velocidad de caída (ej: 0.85-0.95)
       // Escala de las partículas. Menos de 1 para partículas más pequeñas.
       scalar: 0.9, // EDITABLE: Tamaño de las partículas (ej: 0.8-1.2)
       // Origen del confeti en la pantalla (x, y). 0,0 es arriba izquierda.
@@ -148,7 +148,7 @@ const RequestForm = () => {
       // Formas de las partículas.
       shapes: ['circle', 'square'], // EDITABLE: Formas (ej: ['circle', 'square', 'star'])
       // Gravedad. 1 es gravedad normal.
-      gravity: 1, // EDITABLE: Gravedad (ej: 0.5-1.5)
+      gravity: 0.9, // EDITABLE: Gravedad (ej: 0.5-1.5)
     };
 
     // Dispara el confeti con las opciones definidas
