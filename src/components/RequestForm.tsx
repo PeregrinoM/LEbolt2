@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Send, CheckCircle, AlertCircle, Shield, Lock, Eye, EyeOff, MapPin, Phone, Mail, User } from 'lucide-react';
+import confetti from 'canvas-confetti';
 
 const RequestForm = () => {
   // ========================================
@@ -118,6 +119,42 @@ const RequestForm = () => {
     }
 
     return { isValid, message };
+  };
+
+  // ========================================
+  // FUNCIÓN PARA DISPARAR EL CONFFETI
+  // ========================================
+  const triggerConfetti = () => {
+    // Parámetros editables para personalizar el efecto del confeti
+    const confettiOptions = {
+      // Número de partículas de confeti. Menos es más para un efecto minimalista.
+      particleCount: 75, // EDITABLE: Cantidad de confeti (ej: 50-150)
+      // Ángulo de dispersión del confeti. 90 grados es hacia arriba.
+      spread: 90, // EDITABLE: Ángulo de dispersión (ej: 60-120)
+      // Velocidad inicial de las partículas.
+      startVelocity: 30, // EDITABLE: Velocidad inicial (ej: 20-40)
+      // Decaimiento de la velocidad. Cuanto más cerca de 1, más lento caen.
+      decay: 0.95, // EDITABLE: Velocidad de caída (ej: 0.85-0.95)
+      // Escala de las partículas. Menos de 1 para partículas más pequeñas.
+      scalar: 0.9, // EDITABLE: Tamaño de las partículas (ej: 0.8-1.2)
+      // Origen del confeti en la pantalla (x, y). 0,0 es arriba izquierda.
+      // Ajustado para que salga desde el centro inferior de la pantalla.
+      origin: {
+        x: 0.5, // EDITABLE: Posición horizontal (0 a 1, 0.5 es centro)
+        y: 0.7 // EDITABLE: Posición vertical (0 a 1, 0.7 es un poco más arriba del centro inferior)
+      },
+      // Colores del confeti. Usando colores de tu paleta para un look sobrio.
+      colors: ['#0ea5e9', '#f59e0b', '#ffffff', '#bae6fd', '#fde68a'], // EDITABLE: Array de códigos de color (ej: ['#FF0000', '#00FF00'])
+      // Formas de las partículas.
+      shapes: ['circle', 'square'], // EDITABLE: Formas (ej: ['circle', 'square', 'star'])
+      // Gravedad. 1 es gravedad normal.
+      gravity: 0.9, // EDITABLE: Gravedad (ej: 0.5-1.5)
+    };
+
+    // Dispara el confeti con las opciones definidas
+    confetti(confettiOptions);
+    // Puedes disparar múltiples veces para un efecto más denso o variado
+    // confetti({ ...confettiOptions, particleCount: 25, spread: 60, startVelocity: 20, origin: { x: 0.4, y: 0.8 } });
   };
 
   // Calcular progreso del formulario
@@ -276,8 +313,27 @@ const RequestForm = () => {
     } finally {
       // PASO 7: Limpiar estado de carga
       setIsSubmitting(false);
+      
+      // PASO 8: Scroll suave al inicio de la sección para mostrar el mensaje de éxito
+      if (submitStatus !== 'error') {
+        setTimeout(() => {
+          const element = document.getElementById('solicitar');
+          if (element) {
+            element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+          }
+        }, 100);
+      }
     }
   };
+
+  // ========================================
+  // EFECTO PARA DISPARAR EL CONFFETI AL ÉXITO
+  // ========================================
+  useEffect(() => {
+    if (submitStatus === 'success') {
+      triggerConfetti();
+    }
+  }, [submitStatus]); // Se ejecuta cuando submitStatus cambia
 
   // ========================================
   // FUNCIONES AUXILIARES PARA LA UI
