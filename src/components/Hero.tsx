@@ -4,11 +4,11 @@ import { Heart, BookOpen, Gift, Users, Award, Clock } from 'lucide-react';
 const Hero = () => {
   const [counter, setCounter] = useState(0);
   // EDITABLE: Número objetivo del contador
-  const targetCount = 12847;
+  const targetCount = 2500;
 
   useEffect(() => {
     // EDITABLE: Duración de la animación del contador (en milisegundos)
-    const duration = 2000; // 2 segundos
+    const duration =2300; // 2 segundos
     const increment = targetCount / (duration / 50);
     
     const timer = setInterval(() => {
@@ -90,7 +90,7 @@ const Hero = () => {
             <div className="flex items-center space-x-3 text-dorado-600">
               <Award className="h-6 w-6" />
               {/* EDITABLE: Años de experiencia */}
-              <span className="font-source font-semibold text-lg">5+ años transformando vidas</span>
+              <span className="font-source font-semibold text-lg">+2 años transformando vidas</span>
             </div>
           </div>
 

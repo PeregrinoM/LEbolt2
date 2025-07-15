@@ -20,10 +20,10 @@ const AboutBooks = () => {
       description: "Una obra maestra que revela la gran controversia entre el bien y el mal a través de la historia. Descubre las profecías bíblicas y su cumplimiento, encontrando esperanza para el futuro.",
       // EDITABLE: Características del primer libro
       features: [
-        "La preocupacion constante de Dios por sus hijos",
+        "La preocupación constante de Dios por sus hijos",
         "Esperanza para tiempos difíciles",
         "Historia profética revelada",
-        "La Verdad te hara libre"
+        "La Verdad te hará libre"
       ],
       icon: <PenLineIcon className="h-8 w-8 text-dorado-500" />,
       gradient: "from-dorado-50 to-dorado-100",
@@ -38,7 +38,7 @@ const AboutBooks = () => {
       // EDITABLE: Título del segundo libro
       title: "El Camino a Cristo",
       // EDITABLE: Descripción del segundo libro
-      description: "Un mensaje inspirador que te conecta con el Salvador. A través de sus palabras, hallarás esperanza, transformación y la paz que el alma busca.",
+      description: "Un mensaje inspirador que te conecta con el Salvador. A través de sus palabras, hallarás esperanza, transformación y la paz que el corazón busca.",
       // EDITABLE: Características del segundo libro
       features: [
         "Pasos hacia a Cristo",

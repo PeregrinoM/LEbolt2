@@ -43,11 +43,11 @@ const Header = () => {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-1">
               <Users className="h-3 w-3 text-green-500" />
-              <span>3.000 libros entregados</span>
+              <span>2.500 libros entregados</span>
             </div>
             <div className="flex items-center space-x-1">
               <Clock className="h-3 w-3 text-celestial-500" />
-              <span>Más de 5 años divulgando esperanza</span>
+              <span>Más de 2 años divulgando esperanza</span>
             </div>
             <div className="flex items-center space-x-1">
               <Shield className="h-3 w-3 text-dorado-500" />

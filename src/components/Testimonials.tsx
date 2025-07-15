@@ -296,7 +296,7 @@ const Testimonials = () => {
         <div className="text-center">
           <div className="bg-gradient-dorado p-8 rounded-2xl border border-dorado-200 max-w-4xl mx-auto">
             <h3 className="text-3xl font-poppins font-bold text-esperanza-800 mb-6">
-              Ten Fé 🙏🏻
+              Ten Fe 🙏🏻
             </h3>
             <p className="font-source text-esperanza-700 text-xl leading-relaxed">
               No dejes pasar las oportunidades de encontrar aquello que estas buscando.
