@@ -16,7 +16,7 @@ import IntelligentPreloader from './components/IntelligentPreloader';
 
 function App() {
   return (
-    <div className="min-h-screen bg-gradient-celestial font-source">
+    <div className="min-h-screen bg-esperanza-50 font-source">
       {/* Componentes de optimización móvil y rendimiento */}
       <ConnectionSpeedDetector />
       <ConnectionIndicator />
