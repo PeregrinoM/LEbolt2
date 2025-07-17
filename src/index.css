@@ -42,7 +42,7 @@
   }
   
   .btn-celestial {
-    @apply bg-gradient-to-r from-celestial-400 to-celestial-500 hover:from-celestial-500 hover:to-celestial-600 text-white font-poppins font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
+    @apply bg-gradient-to-r from-celestial-400 to-celestial-700 hover:from-celestial-700 hover:to-celestial-900 text-white font-poppins font-semibold shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-300;
     /* Optimización para móvil */
     min-height: 44px; /* Tamaño mínimo recomendado para touch */
     min-width: 44px;
