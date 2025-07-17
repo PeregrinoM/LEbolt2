@@ -38,7 +38,7 @@
 
 @layer components {
   .text-gradient-celestial {
-    @apply bg-gradient-to-r from-celestial-500 to-dorado-500 bg-clip-text text-transparent;
+    @apply bg-gradient-to-r from-celestial-400 to-dorado-500 bg-clip-text text-transparent;
   }
   
   .btn-celestial {
