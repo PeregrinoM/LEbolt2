@@ -49,7 +49,7 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-poppins font-bold text-esperanza-800 mb-8 leading-tight tracking-tight">
             Encuentra la{' '}
             <span className="text-gradient-celestial">
-              Esperanza
+              Luz
             </span>{' '}
             que hay en{' '}
             <span className="text-gradient-celestial">
