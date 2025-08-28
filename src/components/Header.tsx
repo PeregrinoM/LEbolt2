@@ -43,7 +43,7 @@ const Header = () => {
           <div className="flex items-center space-x-6">
             <div className="flex items-center space-x-1">
               <Users className="h-3 w-3 text-green-500" />
-              <span>2.500 libros entregados</span>
+              <span>1.500 libros entregados</span>
             </div>
             <div className="flex items-center space-x-1">
               <Clock className="h-3 w-3 text-celestial-500" />
@@ -60,7 +60,7 @@ const Header = () => {
           <div className="flex items-center space-x-2">
             <Book className="h-8 w-8 text-celestial-500" />
             <span className="text-xl font-poppins font-bold text-gradient-celestial">
-              Libros de Esperanza
+              Libros de Luz y Esperanza
             </span>
           </div>
           
@@ -121,7 +121,7 @@ const Header = () => {
                 className="w-full btn-celestial py-4 px-6 rounded-xl font-poppins font-semibold text-center flex items-center justify-center space-x-2"
               >
                 <span>📖</span>
-                <span>Solicitar mi libro gratuito</span>
+                <span>Solicitar tu libro gratuito</span>
               </button>
             </div>
           </nav>

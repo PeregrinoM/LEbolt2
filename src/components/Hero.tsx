@@ -59,8 +59,8 @@ const Hero = () => {
           
           {/* EDITABLE: Subtítulo/descripción principal */}
           <p className="text-xl md:text-2xl font-source text-esperanza-600 mb-12 max-w-4xl mx-auto leading-relaxed">
-            En un mundo acelerado e incierto, te ofrecemos libros que han transformado millones de vidas. 
-            Recibe gratuitamente obras que iluminarán tu camino a Jesús.
+            En un mundo acelerado e incierto, detente y recibe como obsequio este libros que ha transformado millones de vidas. 
+            Acepta gratuitamente esta obra que iluminarán tu camino a Jesús.
           </p>
 
           {/* Contador de impacto */}
@@ -99,12 +99,12 @@ const Hero = () => {
             onClick={scrollToForm}
             className="btn-celestial py-5 px-10 rounded-full text-xl font-poppins font-semibold shadow-2xl hover:shadow-3xl transform hover:scale-105 transition-all duration-300"
           >
-            Solicitar mi libro gratuito
+            Solicitar tu libro gratuito
           </button>
 
           {/* EDITABLE: Texto informativo inferior */}
           <p className="text-sm font-source text-esperanza-500 mt-6">
-            📍 Disponible solo para Chile • Sin costo de envío • Rapida Entrega
+            📍 Disponible solo para La Región de los Lagos - Chile • Sin costo de envío • Rapida Entrega
           </p>
         </div>
       </div>
