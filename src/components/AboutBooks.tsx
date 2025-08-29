@@ -29,7 +29,7 @@ const AboutBooks = () => {
       gradient: "from-dorado-50 to-dorado-100",
       // EDITABLE: Imágenes del libro - Array de URLs para el carrusel
       images: [
-        "https://images.pexels.com/photos/32897511/pexels-photo-32897511.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
+        "https://images.pexels.com/photos/33677840/pexels-photo-33677840.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
         "https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
         "https://images.pexels.com/photos/1112048/pexels-photo-1112048.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"  // Imagen conceptual 2
       ]
@@ -49,7 +49,7 @@ const AboutBooks = () => {
       gradient: "from-celestial-50 to-celestial-100",
       // EDITABLE: Imágenes del libro - Array de URLs para el carrusel
       images: [
-        "https://images.pexels.com/photos/32897639/pexels-photo-32897639.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
+        "https://images.pexels.com/photos/33677951/pexels-photo-33677951.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
         "https://images.pexels.com/photos/1112048/pexels-photo-1112048.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
         "https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"  // Imagen conceptual 2
       ]
@@ -84,7 +84,7 @@ const AboutBooks = () => {
             {/* EDITABLE: Descripción de la sección */}
             <p className="text-xl font-source text-esperanza-600 max-w-3xl mx-auto">
               Historias de redención, profecía y amor divino al alcance de todos. 
-              Descubre el mensaje que tu corazón necesita hoy.
+              Recibe el mensaje que tu corazón necesita hoy.
             </p>
           </div>
 
