@@ -23,14 +23,13 @@ const AboutBooks = () => {
         "La preocupación constante de Dios por sus hijos",
         "Esperanza para tiempos difíciles",
         "Historia profética revelada",
-        "La Verdad te hará libre"
       ],
       icon: <PenLineIcon className="h-8 w-8 text-dorado-500" />,
       gradient: "from-dorado-50 to-dorado-100",
       // EDITABLE: Imágenes del libro - Array de URLs para el carrusel
       images: [
         "https://images.pexels.com/photos/33677840/pexels-photo-33677840.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
-        "https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
+        "https://images.pexels.com/photos/33681954/pexels-photo-33681954.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
         "https://images.pexels.com/photos/1112048/pexels-photo-1112048.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"  // Imagen conceptual 2
       ]
     },
