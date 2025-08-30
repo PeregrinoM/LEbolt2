@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Loader2 } from 'lucide-react';
 
 interface LazyImageProps {
@@ -18,13 +18,10 @@ const LazyImage: React.FC<LazyImageProps> = ({
   onLoad,
   onError
 }) => {
-  const [imageSrc, setImageSrc] = useState<string | null>(null);
+  const [currentImageSrc, setCurrentImageSrc] = useState<string | null>(null);
   const [isLoaded, setIsLoaded] = useState(false);
-  const [isInView, setIsInView] = useState(false);
   const [hasError, setHasError] = useState(false);
   const [isLoading, setIsLoading] = useState(false);
-  const imgRef = useRef<HTMLImageElement>(null);
-  const observerRef = useRef<IntersectionObserver | null>(null);
 
   // Placeholder SVG optimizado
   const defaultPlaceholder = `data:image/svg+xml;base64,${btoa(`
@@ -39,60 +36,57 @@ const LazyImage: React.FC<LazyImageProps> = ({
     </svg>
   `)}`;
 
+  // Efecto principal que se ejecuta cada vez que cambia la prop src
   useEffect(() => {
-    // Configurar Intersection Observer
-    observerRef.current = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsInView(true);
-          observerRef.current?.disconnect();
-        }
-      },
-      { 
-        threshold: 0.1,
-        rootMargin: '50px' // Comenzar a cargar 50px antes de que sea visible
-      }
-    );
+    // Si no hay src, no hacer nada
+    if (!src) return;
 
-    if (imgRef.current) {
-      observerRef.current.observe(imgRef.current);
-    }
+    // Reiniciar todos los estados para la nueva imagen
+    setIsLoaded(false);
+    setHasError(false);
+    setIsLoading(true);
+    setCurrentImageSrc(null);
 
-    return () => {
-      observerRef.current?.disconnect();
-    };
-  }, []);
+    // Crear una nueva instancia de Image para precargar
+    const img = new Image();
+    let isCancelled = false;
 
-  useEffect(() => {
-    if (isInView && src && !imageSrc && !hasError) {
-      setIsLoading(true);
-      
-      // Precargar la imagen
-      const img = new Image();
-      
-      img.onload = () => {
-        setImageSrc(src);
+    // Configurar manejadores de eventos
+    img.onload = () => {
+      if (!isCancelled) {
+        setCurrentImageSrc(src);
         setIsLoaded(true);
         setIsLoading(false);
         onLoad?.();
-      };
-      
-      img.onerror = () => {
+      }
+    };
+    
+    img.onerror = () => {
+      if (!isCancelled) {
         setHasError(true);
         setIsLoading(false);
         onError?.();
-      };
-      
-      img.src = src;
-    }
-  }, [isInView, src, imageSrc, hasError, onLoad, onError]);
+      }
+    };
+    
+    // Iniciar la carga de la imagen
+    img.src = src;
 
-  const displaySrc = imageSrc || placeholder || defaultPlaceholder;
+    // Función de limpieza para cancelar la carga si el componente se desmonta
+    // o si la src cambia antes de que termine de cargar
+    return () => {
+      isCancelled = true;
+      img.onload = null;
+      img.onerror = null;
+    };
+  }, [src, onLoad, onError]);
+
+  // Determinar qué imagen mostrar
+  const displaySrc = currentImageSrc || placeholder || defaultPlaceholder;
 
   return (
     <div className="relative overflow-hidden">
       <img
-        ref={imgRef}
         src={displaySrc}
         alt={alt}
         className={`transition-all duration-500 ${
@@ -126,7 +120,7 @@ const LazyImage: React.FC<LazyImageProps> = ({
       {/* Progressive enhancement indicator */}
       {!isLoaded && !hasError && !isLoading && (
         <div className="absolute bottom-2 right-2 bg-black/20 text-white px-2 py-1 rounded text-xs font-source">
-          Optimizando...
+          Preparando...
         </div>
       )}
     </div>
