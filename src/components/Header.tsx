@@ -24,10 +24,10 @@ const Header = () => {
 
   const menuItems = [
     { id: 'inicio', label: 'Inicio', icon: '🏠' },
-    { id: 'libros', label: 'Los Libros', icon: '📚' },
+    { id: 'libros', label: 'Libros', icon: '📚' },
     { id: 'testimonios', label: 'Testimonios', icon: '💬' },
     { id: 'solicitar', label: 'Solicitar', icon: '📝' },
-    { id: 'preguntas', label: 'FAQ', icon: '❓' },
+    { id: 'preguntas', label: 'Preguntas', icon: '❓' },
     { id: 'contacto', label: 'Contacto', icon: '📞' }
   ];
 
@@ -78,12 +78,12 @@ const Header = () => {
             ))}
           </nav>
 
-          {/* Mobile menu button */}
+          {/* Mobile menu button , (boton de las 3 rayas*/}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             className="md:hidden p-2 rounded-xl text-esperanza-600 hover:text-celestial-500 hover:bg-celestial-50 transition-all duration-200 mobile-touch-target"
           >
-            <div className="relative w-6 h-6">
+            <div className="relative w-6 h-2">
               <span className={`absolute block w-6 h-0.5 bg-current transform transition-all duration-300 ${
                 isMenuOpen ? 'rotate-45 translate-y-0' : '-translate-y-2'
               }`}></span>
@@ -99,9 +99,9 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         <div className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
+          isMenuOpen ? 'max-h-110 opacity-100' : 'max-h-0 opacity-0'
         }`}>
-          <nav className="py-4 space-y-2">
+          <nav className="py-1 space-y-1">
             {menuItems.map((item, index) => (
               <button 
                 key={item.id}
