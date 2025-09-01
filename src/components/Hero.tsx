@@ -4,7 +4,7 @@ import { Heart, BookOpen, Gift, Users, Award, Clock } from 'lucide-react';
 const Hero = () => {
   const [counter, setCounter] = useState(0);
   // EDITABLE: Número objetivo del contador
-  const targetCount = 2500;
+  const targetCount = 1500;
 
   useEffect(() => {
     // EDITABLE: Duración de la animación del contador (en milisegundos)

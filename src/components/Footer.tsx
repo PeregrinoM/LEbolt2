@@ -13,7 +13,7 @@ const Footer = () => {
             <div className="flex items-center space-x-2 mb-4">
               <Book className="h-8 w-8 text-celestial-400" />
               {/* EDITABLE: Nombre de la marca en el footer */}
-              <span className="text-xl font-poppins font-bold">Libros de Esperanza</span>
+              <span className="text-xl font-poppins font-bold">Libros de Luz y Esperanza</span>
             </div>
             {/* EDITABLE: Descripción de la organización */}
             <p className="font-source text-gray-300 leading-relaxed mb-4">
@@ -85,12 +85,12 @@ const Footer = () => {
               <div className="flex items-center">
                 <Mail className="h-4 w-4 text-celestial-400 mr-2" />
                 {/* EDITABLE: Email de contacto (debe coincidir con Contact.tsx) */}
-                <span className="font-source text-gray-300 text-sm">librosdeesperanza@gmail.com</span>
+                <span className="font-source text-gray-300 text-sm">peregrinomensajero@gmail.com</span>
               </div>
               <div className="flex items-center">
                 <Phone className="h-4 w-4 text-green-400 mr-2" />
                 {/* EDITABLE: Teléfono de contacto (debe coincidir con Contact.tsx) */}
-                <span className="font-source text-gray-300 text-sm">+56 9 1234 5678</span>
+                <span className="font-source text-gray-300 text-sm">+56 9 8441 3846</span>
               </div>
             </div>
           </div>

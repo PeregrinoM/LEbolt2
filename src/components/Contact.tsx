@@ -5,31 +5,27 @@ const Contact = () => {
   return (
     <section id="contacto" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-celestial-50 to-dorado-50">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
-          {/* EDITABLE: Título de la sección */}
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-esperanza-800 mb-4">
-            Contáctanos
-          </h2>
-          {/* EDITABLE: Descripción de la sección */}
-          <p className="text-xl font-source text-esperanza-600">
-            Así te enviaremos el libro y acompañarte en tu búsqueda del conocimiento de Dios
-          </p>
-        </div>
+        
 
         <div className="grid md:grid-cols-2 gap-12">
           <div className="card-celestial p-8 rounded-2xl">
-            {/* EDITABLE: Título de información de contacto */}
-            <h3 className="text-2xl font-poppins font-bold text-esperanza-800 mb-6">
-              Información de Contacto
-            </h3>
-            
+            <div className="text-center mb-8">
+             {/* EDITABLE: Título de la sección */}
+              <h2 className="text-3xl md:text-4xl font-poppins font-bold text-esperanza-800 mb-4">
+                Contáctanos
+              </h2>
+              {/* EDITABLE: Descripción de la sección */}
+              <p className="text-xl font-source text-esperanza-600">
+                Así te enviaremos el libro y acompañarte en tu búsqueda del conocimiento de Dios
+              </p>
+            </div>
             <div className="space-y-6">
               <div className="flex items-start">
                 <Mail className="h-6 w-6 text-celestial-500 mt-1 mr-4 flex-shrink-0" />
                 <div>
                   <h4 className="font-poppins font-semibold text-esperanza-800">Email</h4>
                   {/* EDITABLE: Dirección de email */}
-                  <p className="font-source text-esperanza-600">librosdeesperanza@gmail.com</p>
+                  <p className="font-source text-esperanza-600">peregrinomensajero@gmail.com</p>
                   {/* EDITABLE: Tiempo de respuesta por email */}
                   <p className="text-sm font-source text-esperanza-500 mt-1">
                     Responderemos en menos de 24 horas
@@ -42,7 +38,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-poppins font-semibold text-esperanza-800">Teléfono</h4>
                   {/* EDITABLE: Número de teléfono */}
-                  <p className="font-source text-esperanza-600">+56 9 1234 5678</p>
+                  <p className="font-source text-esperanza-600">+56 9 8441 3846</p>
                   {/* EDITABLE: Información adicional del teléfono */}
                   <p className="text-sm font-source text-esperanza-500 mt-1">
                     WhatsApp disponible
@@ -55,10 +51,10 @@ const Contact = () => {
                 <div>
                   <h4 className="font-poppins font-semibold text-esperanza-800">Cobertura</h4>
                   {/* EDITABLE: Área de cobertura */}
-                  <p className="font-source text-esperanza-600">Todo Chile</p>
+                  <p className="font-source text-esperanza-600">Región de los Lagos</p>
                   {/* EDITABLE: Información de envíos */}
                   <p className="text-sm font-source text-esperanza-500 mt-1">
-                    Envíos gratuitos a todo el país
+                    Envíos gratuitos a toda la Región
                   </p>
                 </div>
               </div>
@@ -70,10 +66,6 @@ const Contact = () => {
                   {/* EDITABLE: Horarios de atención */}
                   <p className="font-source text-esperanza-600">Lunes a Viernes: 9:00 - 18:00</p>
                   <p className="font-source text-esperanza-600">Domingo: 09:00 - 18:00</p>
-                  {/* EDITABLE: Zona horaria */}
-                  <p className="text-sm font-source text-esperanza-500 mt-1">
-                    Horario de Chile Continental
-                  </p>
                 </div>
               </div>
             </div>
