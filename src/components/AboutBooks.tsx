@@ -28,8 +28,8 @@ const AboutBooks = () => {
       gradient: "from-dorado-50 to-dorado-100",
       // EDITABLE: Imágenes del libro - Array de URLs para el carrusel
       images: [
-        "https://images.pexels.com/photos/33677840/pexels-photo-33677840.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
-        "https://images.pexels.com/photos/33681954/pexels-photo-33681954.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
+        "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Portadas/Portada%20El%20Conflicto%20de%20los%20Siglos.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
+        "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/Hombre%20Leyendio%20transporte%20publico.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
         "https://images.pexels.com/photos/1112048/pexels-photo-1112048.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"  // Imagen conceptual 2
       ]
     },
@@ -48,8 +48,8 @@ const AboutBooks = () => {
       gradient: "from-celestial-50 to-celestial-100",
       // EDITABLE: Imágenes del libro - Array de URLs para el carrusel
       images: [
-        "https://images.pexels.com/photos/33677951/pexels-photo-33677951.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
-        "https://images.pexels.com/photos/1112048/pexels-photo-1112048.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
+        "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Portadas/Portada%20Camino%20a%20Cristo.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
+        "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/mujer%20leyendo%20original%203.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
         "https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"  // Imagen conceptual 2
       ]
     }
