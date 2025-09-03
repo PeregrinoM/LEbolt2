@@ -11,10 +11,10 @@ const Testimonials = () => {
 
   const testimonials = [
     {
-      name: "María González",
-      location: "Santiago, Chile",
-      book: "El Camino a Cristo",
-      text: "Este libro llegó en el momento exacto que lo necesitaba. Estaba pasando por una crisis personal y encontré la paz que tanto buscaba. Ahora tengo una relación real con Dios.",
+      name: "Francisco Peña",
+      location: "Fresia Chile",
+      book: "El Conflicto de los Siglos",
+      text: "La lectura de este libro ha superado mis expectativas; me ha asombrado ver cómo la vida de Cristo transformó a grandes reformadores de la historia.",
       rating: 5,
       avatar: "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
       verified: true

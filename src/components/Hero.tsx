@@ -36,7 +36,7 @@ const Hero = () => {
     <section id="inicio" className="pt-32 pb-20 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto">
         <div className="text-center">
-          <div className="flex justify-center mb-12">
+          <div className="flex justify-center mb-8">
             <div className="relative">
               <div className="absolute inset-0 bg-gradient-to-r from-celestial-200 to-dorado-200 rounded-full blur-xl opacity-40 animate-pulse"></div>
               <div className="relative bg-white/90 backdrop-blur-sm p-8 rounded-full shadow-lg border border-celestial-100">

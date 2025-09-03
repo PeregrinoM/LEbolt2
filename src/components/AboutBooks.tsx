@@ -73,7 +73,7 @@ const AboutBooks = () => {
 
   return (
     <>
-      <section id="libros" className="py-20 px-4 sm:px-6 lg:px-8">
+      <section id="libros" className="py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16">
             {/* EDITABLE: Título de la sección */}
