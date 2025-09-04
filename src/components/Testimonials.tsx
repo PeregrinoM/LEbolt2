@@ -246,7 +246,7 @@ const Testimonials = () => {
             {/* Navigation buttons */}
             <button
               onClick={prevSlide}
-              className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg mobile-touch-target transition-all duration-200 hover:bg-white hover:scale-110"
+              className="absolute left-0 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg mobile-touch-target transition-all duration-200 hover:bg-white hover:scale-110"
               disabled={currentIndex === 0}
             >
               <ChevronLeft className="h-5 w-5 text-esperanza-700" />
@@ -254,7 +254,7 @@ const Testimonials = () => {
 
             <button
               onClick={nextSlide}
-              className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg mobile-touch-target transition-all duration-200 hover:bg-white hover:scale-110"
+              className="absolute right-0 top-1/2 transform -translate-y-1/2 bg-white/90 backdrop-blur-sm p-3 rounded-full shadow-lg mobile-touch-target transition-all duration-200 hover:bg-white hover:scale-110"
               disabled={currentIndex === testimonials.length - 1}
             >
               <ChevronRight className="h-5 w-5 text-esperanza-700" />
