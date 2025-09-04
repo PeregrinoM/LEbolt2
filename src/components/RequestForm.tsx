@@ -663,16 +663,29 @@ const RequestForm = () => {
                   formData.libro === 'El Camino a Cristo' 
                     ? 'border-celestial-500 bg-celestial-50 shadow-lg' 
                     : 'border-celestial-200 hover:border-celestial-400 hover:bg-celestial-50'
-                }`}>
+                } relative`}>
+                  {/* FONDO DE IMAGEN PARA EL CAMINO A CRISTO */}
+                  {/* EDITABLE: Puedes ajustar estos valores para personalizar el efecto */}
+                  <div 
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat rounded-xl z-0"
+                    style={{
+                      backgroundImage: `url('https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Portadas/Fondo%20Camino.png')`,
+                      /* EDITABLE: Ajusta la opacidad (0.05 = muy transparente, 0.15 = menos transparente) */
+                      opacity: 0.08,
+                      /* EDITABLE: Ajusta el difuminado (blur(4px) = poco, blur(8px) = mucho) */
+                      filter: 'blur(6px)',
+                    }}
+                  ></div>
+                  
                   <input
                     type="radio"
                     name="libro"
                     value="El Camino a Cristo"
                     checked={formData.libro === 'El Camino a Cristo'}
                     onChange={(e) => handleInputChange('libro', e.target.value)}
-                    className="mr-4 w-5 h-5"
+                    className="mr-4 w-5 h-5 relative z-10"
                   />
-                  <div>
+                  <div className="relative z-10">
                     <h4 className="font-poppins font-semibold text-esperanza-800 text-lg">El Camino a Cristo</h4>
                     <p className="text-sm font-source text-esperanza-600">Pasos hacia la salvación y paz.</p>
                   </div>
