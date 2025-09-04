@@ -641,7 +641,7 @@ const RequestForm = () => {
                       /* EDITABLE: Ajusta la opacidad (0.05 = muy transparente, 0.15 = menos transparente) */
                       opacity: 0.5,
                       /* EDITABLE: Ajusta el difuminado (blur-sm = poco, blur-md = medio, blur-lg = mucho) */
-                      filter: 'blur(1px)',
+                      filter: 'blur(2px)',
                     }}
                   ></div>
                   
