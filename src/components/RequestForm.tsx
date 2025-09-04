@@ -639,7 +639,7 @@ const RequestForm = () => {
                     style={{
                       backgroundImage: `url('https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Portadas/Fondo%20conclicto%20.png')`,
                       /* EDITABLE: Ajusta la opacidad (0.05 = muy transparente, 0.15 = menos transparente) */
-                      opacity: 0.9,
+                      opacity: 0.7,
                       /* EDITABLE: Ajusta el difuminado (blur-sm = poco, blur-md = medio, blur-lg = mucho) */
                       filter: 'blur(1px)',
                     }}
