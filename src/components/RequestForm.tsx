@@ -671,7 +671,7 @@ const RequestForm = () => {
                     style={{
                       backgroundImage: `url('https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Portadas/Fondo%20Camino.png')`,
                       /* EDITABLE: Ajusta la opacidad (0.05 = muy transparente, 0.15 = menos transparente) */
-                      opacity: 0.08,
+                      opacity: 0.4,
                       /* EDITABLE: Ajusta el difuminado (blur(4px) = poco, blur(8px) = mucho) */
                       filter: 'blur(6px)',
                     }}
