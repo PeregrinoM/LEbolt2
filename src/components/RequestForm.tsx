@@ -60,11 +60,7 @@ const RequestForm = () => {
 
   // Ciudades de Chile para autocompletado
   const ciudadesChile = [
-    'Santiago', 'Valparaíso', 'Concepción', 'La Serena', 'Antofagasta',
-    'Temuco', 'Rancagua', 'Talca', 'Arica', 'Chillán', 'Iquique',
-    'Los Ángeles', 'Puerto Montt', 'Calama', 'Copiapó', 'Osorno',
-    'Quillota', 'Valdivia', 'Punta Arenas', 'Coquimbo', 'Viña del Mar',
-    'San Antonio', 'Curicó', 'Linares', 'Ovalle', 'Melipilla'
+    'Ancud', 'Castro', 'Chonchi', 'Curaco de Vélez', 'Dalcahue', 'Puqueldón', 'Queilén', 'Quemchi', 'Quellón', 'Quinchao', 'Calbuco', 'Cochamó', 'Fresia', 'Frutillar', 'Llanquihue', 'Los Muermos', 'Maullín', 'Puerto Montt', 'Puerto Varas', 'Osorno', 'Puerto Octay', 'Purranque', 'Puyehue', 'Río Negro', 'San Juan de la Costa', 'San Pablo', 'Chaitén', 'Futaleufú', 'Hualaihué', 'Palena'
   ];
 
   // Opciones de motivación - DEBEN coincidir exactamente con las opciones en Google Forms
@@ -643,7 +639,7 @@ const RequestForm = () => {
                     style={{
                       backgroundImage: `url('https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Portadas/Fondo%20conclicto%20.png')`,
                       /* EDITABLE: Ajusta la opacidad (0.05 = muy transparente, 0.15 = menos transparente) */
-                      opacity: 0.08,
+                      opacity: 0.35,
                       /* EDITABLE: Ajusta el difuminado (blur-sm = poco, blur-md = medio, blur-lg = mucho) */
                       filter: 'blur(6px)',
                     }}
