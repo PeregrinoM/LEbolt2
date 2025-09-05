@@ -31,7 +31,7 @@ const Process = () => {
       // EDITABLE: Descripción del paso 3
       description: "Tu libro será enviado gratuitamente a la dirección que proporcionaste.",
       // EDITABLE: Tiempo estimado del paso 3
-      time: "5-10 días",
+      time: "5-7 días",
       color: "dorado"
     },
     {

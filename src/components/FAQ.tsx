@@ -22,7 +22,7 @@ const FAQ = () => {
       // EDITABLE: Pregunta 3
       question: "¿Cuánto tiempo tarda en llegar el libro?",
       // EDITABLE: Respuesta 3 (tiempo de entrega)
-      answer: "Generalmente entre 5 a 10 días hábiles, dependiendo de tu ubicación 📍 en Chile."
+      answer: "Generalmente entre 3 a 7 días hábiles, dependiendo de tu ubicación 📍 en la región."
     },
     {
       // EDITABLE: Pregunta 4
