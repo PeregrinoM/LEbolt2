@@ -122,7 +122,35 @@ const AboutBooks = () => {
                 )}
                 
                 {/* FONDO DE DEGRADADO PARA OTROS LIBROS (mantiene el diseño original) */}
-                {index !== 0 && (
+                {/* FONDO DE IMAGEN CON ÁNGULO PARA EL CAMINO A CRISTO */}
+                {/* EDITABLE: Solo se aplica al segundo libro (El Camino a Cristo) */}
+                {index === 1 && (
+                  <div 
+                    className="absolute inset-0 rounded-2xl z-0"
+                    style={{
+                      /* EDITABLE: Combinación de degradado lineal con ángulo + imagen de fondo */
+                      backgroundImage: `
+                        linear-gradient(
+                          135deg, 
+                          rgba(255, 255, 255, 0.7), 
+                          rgba(248, 250, 252, 0.8)
+                        ), 
+                        url('https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Portadas/Fondo%20Camino.png')
+                      `,
+                      /* EDITABLE: Comportamiento de la imagen de fondo */
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                      /* EDITABLE: Difuminado de toda la capa (imagen + degradado) */
+                      filter: 'blur(4px)',
+                      /* EDITABLE: Opacidad general de toda la capa de fondo */
+                      opacity: 0.6,
+                    }}
+                  ></div>
+                )}
+                
+                {/* FONDO DE DEGRADADO PARA OTROS LIBROS (si hubiera más) */}
+                {index > 1 && (
                   <div className={`absolute inset-0 bg-gradient-to-br ${book.gradient} rounded-2xl z-0`}></div>
                 )}
                 
