@@ -92,8 +92,40 @@ const AboutBooks = () => {
             {books.map((book, index) => (
               <div
                 key={index}
-                className={`card-celestial bg-gradient-to-br ${book.gradient} p-8 rounded-2xl hover:scale-105`}
+                className={`card-celestial p-8 rounded-2xl hover:scale-105 relative`}
               >
+                {/* FONDO DE IMAGEN CON ÁNGULO PARA EL CONFLICTO DE LOS SIGLOS */}
+                {/* EDITABLE: Solo se aplica al primer libro (El Conflicto de los Siglos) */}
+                {index === 0 && (
+                  <div 
+                    className="absolute inset-0 rounded-2xl z-0"
+                    style={{
+                      /* EDITABLE: Combinación de degradado lineal con ángulo + imagen de fondo */
+                      backgroundImage: `
+                        linear-gradient(
+                          135deg, 
+                          rgba(255, 255, 255, 0.7), 
+                          rgba(248, 250, 252, 0.8)
+                        ), 
+                        url('https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Portadas/Fondo%20conclicto%20.png')
+                      `,
+                      /* EDITABLE: Comportamiento de la imagen de fondo */
+                      backgroundSize: 'cover',
+                      backgroundPosition: 'center',
+                      backgroundRepeat: 'no-repeat',
+                      /* EDITABLE: Difuminado de toda la capa (imagen + degradado) */
+                      filter: 'blur(4px)',
+                      /* EDITABLE: Opacidad general de toda la capa de fondo */
+                      opacity: 0.6,
+                    }}
+                  ></div>
+                )}
+                
+                {/* FONDO DE DEGRADADO PARA OTROS LIBROS (mantiene el diseño original) */}
+                {index !== 0 && (
+                  <div className={`absolute inset-0 bg-gradient-to-br ${book.gradient} rounded-2xl z-0`}></div>
+                )}
+                
                 {/* Imagen del libro con lazy loading y funcionalidad de modal */}
                 {book.images && book.images.length > 0 && (
                   <div className="mb-6 flex justify-center">
@@ -122,16 +154,16 @@ const AboutBooks = () => {
                   </div>
                 )}
                 
-                <div className="flex items-center mb-6">
+                <div className="flex items-center mb-6 relative z-10">
                   {book.icon}
                   <h3 className="text-2xl font-poppins font-bold text-esperanza-800 ml-3">{book.title}</h3>
                 </div>
                 
-                <p className="font-source text-esperanza-700 mb-6 leading-relaxed">
+                <p className="font-source text-esperanza-700 mb-6 leading-relaxed relative z-10">
                   {book.description}
                 </p>
                 
-                <div className="space-y-3">
+                <div className="space-y-3 relative z-10">
                   {book.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center">
                       <div className="w-2 h-2 bg-green-400 rounded-full mr-3"></div>
