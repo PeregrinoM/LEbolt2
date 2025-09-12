@@ -380,8 +380,8 @@ const RequestForm = () => {
               ¡Solicitud Enviada con Éxito!
             </h2>
             <p className="font-source text-esperanza-600 mb-8 text-lg">
-              Gracias por tu interés. Hemos recibido tu solicitud y pronto recibirás tu libro 
-              de esperanza en la dirección proporcionada.
+              Gracias por tu interés. Hemos recibido tu solicitud y pronto recibirás tu libro ♥️
+               en la dirección proporcionada.
             </p>
             <div className="bg-green-100 border border-green-200 rounded-xl p-6 mb-6">
               <h3 className="font-poppins font-semibold text-green-800 mb-2">Próximos pasos:</h3>
@@ -412,7 +412,7 @@ const RequestForm = () => {
             Solicita tu Libro Gratuito
           </h2>
           <p className="text-xl font-source text-esperanza-600">
-            Completa el formulario y recibe tu libro de esperanza sin costo alguno
+            Completa el formulario y recibe tu libro de esperanza sin costo alguno a tu casa
           </p>
         </div>
 
