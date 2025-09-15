@@ -709,7 +709,7 @@ const RequestForm = () => {
               </label>
               <div className="grid md:grid-cols-2 gap-4">
                 {motivaciones.map((motivacion, index) => (
-                  <label key={index} className={`flex items-center p-4 border rounded-xl cursor-pointer transition-all duration-200 mobile-touch-target ${
+                  <label key={index} className={`justify-start flex items-center px-8 py-4 border rounded-xl cursor-pointer transition-all duration-200 mobile-touch-target ${
                     formData.motivacion.includes(motivacion)
                       ? 'border-celestial-500 bg-celestial-50 shadow-md'
                       : 'border-celestial-200 hover:bg-celestial-50'
