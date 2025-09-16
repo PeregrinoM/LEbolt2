@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Send, CheckCircle, AlertCircle, Shield, Lock, Eye, EyeOff, MapPin, Phone, Mail, User } from 'lucide-react';
+import { Send, CheckCircle, AlertCircle, Shield, Lock, Eye, EyeOff, MapPin, Phone, Mail, User, MessageCircle } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 const RequestForm = () => {
@@ -828,6 +828,42 @@ const RequestForm = () => {
           </form>
         </div>
       </div>
+              {/* Tarjeta WhatsApp - Alternativa al formulario */}
+              <div className="mt-20 text-center">
+          <div className="bg-gradient-dorado p-8 rounded-2xl border border-dorado-200 max-w-4xl mx-auto hover:scale-[1.02] transition-all duration-300 hover:shadow-xl">
+            <div className="flex items-center justify-center mb-6">
+              <div className="bg-whatsapp-500 rounded-full p-3 mr-4 pulse-animation">
+                <MessageCircle className="w-8 h-8 text-white" />
+              </div>
+              <h3 className="text-3xl font-poppins font-bold text-esperanza-800">
+                ¿Prefieres contacto directo? 💬
+              </h3>
+            </div>
+            
+            <p className="font-source text-esperanza-700 text-xl leading-relaxed mb-6">
+              Si no quieres llenar el formulario, escríbeme por WhatsApp y te envío el libro al instante. 
+              <span className="font-semibold text-esperanza-800"> ¡Sin formularios, más personal!</span>
+            </p>
+            
+            <button 
+              onClick={() => {
+                const phoneNumber = "56984413846";
+                const message = encodeURIComponent("¡Hola! Vi tu landing page sobre los libros y me interesa recibir uno. ¿Podrías enviármelo por favor? 📖");
+                const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+                window.open(whatsappURL, '_blank');
+              }}
+              className="bg-gradient-to-r from-whatsapp-500 to-whatsapp-600 hover:from-whatsapp-600 hover:to-whatsapp-700 text-white font-poppins font-bold py-4 px-8 rounded-full flex items-center justify-center gap-3 mx-auto transition-all duration-300 shadow-lg hover:shadow-xl text-lg transform hover:scale-105 active:scale-95"
+            >
+              <MessageCircle className="w-6 h-6" />
+              Escribir por WhatsApp
+            </button>
+            
+            <p className="text-sm text-esperanza-600 mt-4 font-source flex items-center justify-center gap-2">
+              <span className="inline-block w-2 h-2 bg-whatsapp-500 rounded-full animate-pulse"></span>
+              Respuesta garantizada en menos de 2 horas
+            </p>
+          </div>
+        </div>
     </section>
   );
 };

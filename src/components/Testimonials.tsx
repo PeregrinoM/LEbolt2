@@ -1,6 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Quote, Star, CheckCircle, ChevronLeft, ChevronRight } from 'lucide-react';
-
+import { Quote, Star, CheckCircle, ChevronLeft, ChevronRight, MessageCircle } from 'lucide-react';
 const Testimonials = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [touchStart, setTouchStart] = useState(0);
@@ -29,12 +28,12 @@ const Testimonials = () => {
       verified: true
     },
     {
-      name: "Ana Rodríguez",
-      location: "Concepción, Chile",
+      name: "Claudia Anonimo",
+      location: "Región de los Lagos, Chile",
       book: "El Camino a Cristo",
-      text: "Después de leer este libro, mi vida cambió completamente. Encontré propósito y dirección. Lo he regalado a toda mi familia y amigos.",
+      text: "Es maravilloso como este libro abarca temas que aparentemente son complejos pero que en realidad son simples de abordar y asimilar, en especial sobre el amor de Dios, hacia nosotros.",
       rating: 5,
-      avatar: "https://images.pexels.com/photos/1239291/pexels-photo-1239291.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
+      avatar: "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Testimonios/Claudia%20anonimo.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
       verified: true
     },
     {
@@ -289,17 +288,6 @@ const Testimonials = () => {
               <span>👈</span>
               <span>Desliza para ver más testimonios</span>
               <span>👉</span>
-            </p>
-          </div>
-        </div>
-
-        <div className="text-center">
-          <div className="bg-gradient-dorado p-8 rounded-2xl border border-dorado-200 max-w-4xl mx-auto">
-            <h3 className="text-3xl font-poppins font-bold text-esperanza-800 mb-6">
-              Ten Fe 🙏🏻
-            </h3>
-            <p className="font-source text-esperanza-700 text-xl leading-relaxed">
-              No dejes pasar las oportunidades de encontrar aquello que estas buscando.
             </p>
           </div>
         </div>
