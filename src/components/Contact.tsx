@@ -41,7 +41,8 @@ const Contact = () => {
                   <p className="font-source text-esperanza-600">+56 9 8441 3846</p>
                   {/* EDITABLE: Información adicional del teléfono */}
                   <p className="text-sm font-source text-esperanza-500 mt-1">
-                    WhatsApp disponible
+                      <span className="inline-block w-2 h-2 bg-whatsapp-500 rounded-full animate-pulse"></span>
+                      &nbsp;&nbsp;WhatsApp disponible
                   </p>
                 </div>
               </div>
