@@ -836,19 +836,19 @@ const RequestForm = () => {
                 <MessageCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-poppins font-bold text-esperanza-800">
-                ¿Prefieres contacto directo? 💬
+                ¿Prefieres WhatsApp? 💬
               </h3>
             </div>
             
             <p className="font-source text-esperanza-700 text-xl leading-relaxed mb-6">
-            Si prefieres, escríbeme por WhatsApp y te envío el libro al instante. ¡Sin formularios, más personal!. 
+            Si prefieres, escríbeme por WhatsApp y te envío el libro al instante. 
               <span className="font-semibold text-esperanza-800"> ¡Sin formularios, más personal!</span>
             </p>
             
             <button 
               onClick={() => {
                 const phoneNumber = "56984413846";
-                const message = encodeURIComponent("¡Hola! Vi tu landing page sobre los libros y me interesa recibir uno. ¿Podrías enviármelo por favor? 📖");
+                const message = encodeURIComponent("¡Hola! Vi esta pagina sobre los libros y me interesa recibir uno. ¿Podrías enviármelo por favor? 📖");
                 const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
                 window.open(whatsappURL, '_blank');
               }}
@@ -860,7 +860,7 @@ const RequestForm = () => {
             
             <p className="text-sm text-esperanza-600 mt-4 font-source flex items-center justify-center gap-2">
               <span className="inline-block w-2 h-2 bg-whatsapp-500 rounded-full animate-pulse"></span>
-              Respuesta garantizada en menos de 2 horas
+              Responderemos lo antes posible 😉
             </p>
           </div>
         </div>

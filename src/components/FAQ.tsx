@@ -61,7 +61,7 @@ const FAQ = () => {
   };
 
   return (
-    <section id="preguntas" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="preguntas" className="py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
         <div className="text-center mb-8">
           {/* EDITABLE: Título de la sección */}
