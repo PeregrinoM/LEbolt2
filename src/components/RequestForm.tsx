@@ -841,7 +841,7 @@ const RequestForm = () => {
             </div>
             
             <p className="font-source text-esperanza-700 text-xl leading-relaxed mb-6">
-            Si prefieres, escríbeme por WhatsApp y escribenos. 
+            Si prefieres, escríbenos por WhatsApp. 
               <span className="font-semibold text-esperanza-800"> ¡Sin formularios, más personal!</span>
             </p>
             

@@ -13,7 +13,7 @@ const Testimonials = () => {
       name: "Francisco Peña",
       location: "Fresia Chile",
       book: "El Conflicto de los Siglos",
-      text: "La lectura de este libro ha superado mis expectativas; me asombra leer cómo la vida de Cristo transformó a grandes reformadores de la historia.",
+      text: "La lectura de este libro ha superado mis expectativas; me asombra leer cómo la vida de Cristo transformó a quienes serian reformadores de la historia.",
       rating: 5,
       avatar: "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Testimonios/Francisco.JPG?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
       verified: true
