@@ -18,15 +18,15 @@ const Testimonials = () => {
       avatar: "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Testimonios/Francisco.JPG?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
       verified: true
     },
-    {
-      name: "Carlos Mendoza",
-      location: "Valparaíso, Chile",
-      book: "El Conflicto de los Siglos",
-      text: "Increíble cómo este libro me ayudó a entender los tiempos que vivimos. Las profecías cobran sentido y tengo esperanza para el futuro, sin importar lo que pase.",
-      rating: 5,
-      avatar: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
-      verified: true
-    },
+    //{
+    //  name: "Carlos Mendoza",
+    //  location: "Valparaíso, Chile",
+    //  book: "El Conflicto de los Siglos",
+    //  text: "Increíble cómo este libro me ayudó a entender los tiempos que vivimos. Las profecías cobran sentido y tengo esperanza para el futuro, sin importar lo que pase.",
+    //  rating: 5,
+    //  avatar: "https://images.pexels.com/photos/1222271/pexels-photo-1222271.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
+    //  verified: true
+    //},
     {
       name: "Claudia Anonimo",
       location: "Región de los Lagos, Chile",
@@ -36,33 +36,33 @@ const Testimonials = () => {
       avatar: "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Testimonios/Claudia%20anonimo.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
       verified: true
     },
-    {
-      name: "Pedro Silva",
-      location: "La Serena, Chile",
-      book: "El Conflicto de los Siglos",
-      text: "Nunca había leído algo tan profundo y revelador. Me ayudó a entender la Biblia de una manera completamente nueva. Altamente recomendado.",
-      rating: 5,
-      avatar: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
-      verified: true
-    },
-    {
-      name: "Lucía Morales",
-      location: "Temuco, Chile",
-      book: "El Camino a Cristo",
-      text: "Estaba perdida espiritualmente y este libro me guió paso a paso hacia una fe genuina. Ahora tengo paz interior y alegría verdadera.",
-      rating: 5,
-      avatar: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
-      verified: true
-    },
-    {
-      name: "Roberto Herrera",
-      location: "Antofagasta, Chile",
-      book: "El Conflicto de los Siglos",
-      text: "Este libro me abrió los ojos a la realidad espiritual. Entendí la historia desde una perspectiva completamente nueva y encontré esperanza eterna.",
-      rating: 5,
-      avatar: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
-      verified: true
-    }
+    //{
+    //  name: "Pedro Silva",
+    //  location: "La Serena, Chile",
+    //  book: "El Conflicto de los Siglos",
+    //  text: "Nunca había leído algo tan profundo y revelador. Me ayudó a entender la Biblia de una manera completamente nueva. Altamente recomendado.",
+    //  rating: 5,
+    //  avatar: "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
+    //  verified: true
+    //},
+    //{
+    //  name: "Lucía Morales",
+    //  location: "Temuco, Chile",
+    //  book: "El Camino a Cristo",
+    //  text: "Estaba perdida espiritualmente y este libro me guió paso a paso hacia una fe genuina. Ahora tengo paz interior y alegría verdadera.",
+    //  rating: 5,
+    //  avatar: "https://images.pexels.com/photos/1130626/pexels-photo-1130626.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
+    //  verified: true
+    //},
+    //{
+    //  name: "Roberto Herrera",
+    //  location: "Antofagasta, Chile",
+    //  book: "El Conflicto de los Siglos",
+    //  text: "Este libro me abrió los ojos a la realidad espiritual. Entendí la historia desde una perspectiva completamente nueva y encontré esperanza eterna.",
+    //  rating: 5,
+    //  avatar: "https://images.pexels.com/photos/1043471/pexels-photo-1043471.jpeg?auto=compress&cs=tinysrgb&w=150&h=150&fit=crop&crop=face",
+    //  verified: true
+    //}
   ];
 
   const minSwipeDistance = 50;
