@@ -60,7 +60,7 @@ const Header = () => {
           <div className="flex items-center space-x-2">
             <Book className="h-8 w-8 text-celestial-500" />
             <span className="text-xl font-poppins font-bold text-gradient-celestial">
-              Libros de Luz y Esperanza
+              Libros Amparo y Fortaleza
             </span>
           </div>
           
