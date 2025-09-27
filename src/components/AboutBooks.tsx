@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Star, Clock, Users, Lightbulb, PenLineIcon } from 'lucide-react';
+import { Star, Clock, Users, Lightbulb, PenLine as PenLineIcon, Download, ExternalLink } from 'lucide-react';
 import LazyImage from './LazyImage';
 import ImageCarouselModal from './ImageCarouselModal';
 
@@ -32,7 +32,9 @@ const AboutBooks = () => {
         "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/Hombre%20Leyendio%20transporte%20publico.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
         "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/Leyendo%20Conflicto%203.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 2
         "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/Leyendo%20Conflicto%202.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"  // Imagen conceptual 3
-      ]
+      ],
+      // EDITABLE: URL de descarga para El Conflicto de los Siglos
+      downloadUrl: "https://drive.google.com/file/d/1o92V1RqQZfh7LQWHH_5f47XG9aOjrXPS/view?usp=sharing"
     },
     {
       // EDITABLE: Título del segundo libro
@@ -52,7 +54,9 @@ const AboutBooks = () => {
         "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Portadas/Portada%20Camino%20a%20Cristo.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
         "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/mujer%20leyendo%20original%203.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
         "https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"  // Imagen conceptual 2
-      ]
+      ],
+      // EDITABLE: URL de descarga para El Camino a Cristo
+      downloadUrl: "https://drive.google.com/file/d/10kCPzrz7BEtjLBzia4DBi5B1D5MoC8y0/view?usp=sharing"
     }
   ];
 
@@ -72,6 +76,14 @@ const AboutBooks = () => {
     setModalBookTitle('');
   };
 
+  // Función para manejar la descarga del libro
+  const handleDownload = (downloadUrl: string, bookTitle: string) => {
+    // Abrir en nueva pestaña para que el usuario pueda descargar
+    window.open(downloadUrl, '_blank');
+    
+    // Opcional: Tracking de descarga (puedes agregar analytics aquí)
+    console.log(`Descarga iniciada: ${bookTitle}`);
+  };
   return (
     <>
       <section id="libros" className="py-6 px-4 sm:px-6 lg:px-8">
@@ -198,6 +210,38 @@ const AboutBooks = () => {
                       <span className="font-source text-esperanza-700">{feature}</span>
                     </div>
                   ))}
+                </div>
+                
+                {/* Botones de acción */}
+                <div className="mt-8 flex flex-col sm:flex-row gap-4 relative z-10">
+                  {/* Botón de descarga digital */}
+                  <button
+                    onClick={() => handleDownload(book.downloadUrl, book.title)}
+                    className="flex-1 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-poppins font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                  >
+                    <Download className="h-5 w-5" />
+                    <span>Descargar PDF</span>
+                  </button>
+                  
+                  {/* Botón para solicitar físico */}
+                  <button
+                    onClick={() => {
+                      const element = document.getElementById('solicitar');
+                      if (element) element.scrollIntoView({ behavior: 'smooth' });
+                    }}
+                    className="flex-1 bg-gradient-to-r from-celestial-500 to-celestial-600 hover:from-celestial-600 hover:to-celestial-700 text-white font-poppins font-semibold py-3 px-6 rounded-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+                  >
+                    <ExternalLink className="h-5 w-5" />
+                    <span>Solicitar Físico</span>
+                  </button>
+                </div>
+                
+                {/* Información adicional sobre las opciones */}
+                <div className="mt-4 text-center relative z-10">
+                  <p className="text-sm font-source text-esperanza-500">
+                    📱 <span className="font-semibold">Digital:</span> Descarga inmediata • 
+                    📦 <span className="font-semibold">Físico:</span> Envío gratuito a tu casa
+                  </p>
                 </div>
               </div>
             ))}
