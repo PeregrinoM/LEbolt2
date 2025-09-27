@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Star, Clock, Users, Lightbulb, PenLineIcon, Download, ExternalLink } from 'lucide-react';
+import { Star, Clock, Users, Lightbulb, PenLine as PenLineIcon, Download, ExternalLink } from 'lucide-react';
 import LazyImage from './LazyImage';
 import ImageCarouselModal from './ImageCarouselModal';
 
