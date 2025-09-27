@@ -4,6 +4,19 @@ import { Star, Clock, Users, Lightbulb, PenLine as PenLineIcon, Download, Extern
 import LazyImage from './LazyImage';
 import ImageCarouselModal from './ImageCarouselModal';
 
+// También necesitas agregar la declaración de tipos para gtag
+declare global {
+  interface Window {
+    gtag: (
+      command: 'config' | 'event' | 'js',
+      targetId: string | Date,
+      config?: {
+        [key: string]: any;
+      }
+    ) => void;
+  }
+}
+
 const AboutBooks = () => {
   // Estado para controlar el modal de imágenes
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -78,6 +91,18 @@ const AboutBooks = () => {
 
   // Función para manejar la descarga del libro
   const handleDownload = (downloadUrl: string, bookTitle: string) => {
+   
+    // Tracking de evento en Google Analytics 4
+  if (typeof window !== 'undefined' && window.gtag) {
+    window.gtag('event', 'download', {
+      event_category: 'engagement',
+      event_label: bookTitle,
+      file_name: bookTitle,
+      file_extension: 'pdf',
+      link_url: downloadUrl,
+      value: 1
+    });
+  }
     // Abrir en nueva pestaña para que el usuario pueda descargar
     window.open(downloadUrl, '_blank');
     
