@@ -1,6 +1,6 @@
 import React from 'react';
 import { useState } from 'react';
-import { Star, Clock, Users, Lightbulb, PenLine as PenLineIcon, Download, ExternalLink } from 'lucide-react';
+import { Star, Clock, Users, Lightbulb, PenLine as PenLineIcon, Download, ExternalLink, BookType } from 'lucide-react';
 import LazyImage from './LazyImage';
 import ImageCarouselModal from './ImageCarouselModal';
 
@@ -37,7 +37,7 @@ const AboutBooks = () => {
         "Esperanza para tiempos difíciles",
         "Historia profética revelada",
       ],
-      icon: <PenLineIcon className="h-8 w-8 text-dorado-500" />,
+      icon: <BookType className="h-8 w-8 text-dorado-500" />,
       gradient: "from-dorado-50 to-dorado-100",
       // EDITABLE: Imágenes del libro - Array de URLs para el carrusel
       images: [
@@ -60,7 +60,7 @@ const AboutBooks = () => {
         "Paz interior que solo Dios puede dar",
         "Relación personal con Dios",
       ],
-      icon: <PenLineIcon className="h-8 w-8 text-celestial-500" />,
+      icon: <BookType className="h-8 w-8 text-celestial-500" />,
       gradient: "from-celestial-50 to-celestial-100",
       // EDITABLE: Imágenes del libro - Array de URLs para el carrusel
       images: [
@@ -261,33 +261,20 @@ const AboutBooks = () => {
                   </button>
                 </div>
                 
-                {/* Información adicional sobre las opciones */}
-                <div className="mt-4 text-center relative z-10">
+                 {/* Información adicional sobre las opciones */}
+                 <div className="mt-4 text-center relative z-10">
                   <p className="text-sm font-source text-esperanza-500">
-                    📱 <span className="font-semibold">Digital:</span> Descarga inmediata • 
-                    📦 <span className="font-semibold">Físico:</span> Envío gratuito a tu casa
+                    <span className="block sm:inline">
+                      📱 <span className="font-semibold">Digital:</span> Descarga inmediata
+                    </span>
+                    <span className="hidden sm:inline"> • </span>
+                    <span className="block sm:inline">
+                      📦 <span className="font-semibold">Físico:</span> Envío gratuito a tu casa
+                    </span>
                   </p>
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="card-celestial rounded-2xl p-8">
-            <div className="grid md:grid-cols-3 gap-8 text-center">
-              {/* EDITABLE: Estadísticas de impacto */}
-              <div className="flex flex-col items-center">
-                <Users className="h-12 w-12 text-celestial-500 mb-4" />
-                <h4 className="text-xl font-poppins font-bold text-esperanza-800 mb-2">Millones de Lectores</h4>
-                <p className="font-source text-esperanza-600">Traducidos a más de 100 idiomas</p>
-              </div>
-              <div className="flex flex-col items-center">
-                <Clock className="h-12 w-12 text-green-500 mb-4" />
-                {/* EDITABLE: Años de historia */}
-                <h4 className="text-xl font-poppins font-bold text-esperanza-800 mb-2">Más de 110 Años</h4>
-                {/* EDITABLE: Año de inicio */}
-                <p className="font-source text-esperanza-600">Transformando vidas desde 1911</p>
-              </div>
-            </div>
           </div>
         </div>
       </section>

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Book, Menu, X, Shield, Users, Clock } from 'lucide-react';
+import { Book, Menu, X, Shield, Users, Clock, Bookmark, BookMarked } from 'lucide-react';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -58,7 +58,7 @@ const Header = () => {
 
         <div className="flex justify-between items-center h-16">
           <div className="flex items-center space-x-2">
-            <Book className="h-8 w-8 text-celestial-500" />
+            <BookMarked className="h-8 w-8 text-celestial-500" />
             <span className="text-xl font-poppins font-bold text-gradient-celestial">
               Libros Amparo y Fortaleza
             </span>
