@@ -42,9 +42,9 @@ const AboutBooks = () => {
       // EDITABLE: Imágenes del libro - Array de URLs para el carrusel
       images: [
         "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Portadas/Portada%20El%20Conflicto%20de%20los%20Siglos.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
-        "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/Hombre%20Leyendio%20transporte%20publico.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
-        "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/Leyendo%20Conflicto%203.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 2
-        "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/Leyendo%20Conflicto%202.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"  // Imagen conceptual 3
+        "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/Hombre%20Leyendio%20transporte%20publico.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen 1
+        "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/Leyendo%20Conflicto%203.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen 2
+        "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/Leyendo%20Conflicto%202.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"  // Imagen 3
       ],
       // EDITABLE: URL de descarga para El Conflicto de los Siglos
       downloadUrl: "https://drive.google.com/file/d/1o92V1RqQZfh7LQWHH_5f47XG9aOjrXPS/view?usp=sharing"
@@ -65,8 +65,8 @@ const AboutBooks = () => {
       // EDITABLE: Imágenes del libro - Array de URLs para el carrusel
       images: [
         "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Portadas/Portada%20Camino%20a%20Cristo.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Portada principal
-        "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/mujer%20leyendo%20original%203.png?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen conceptual 1
-        "https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"  // Imagen conceptual 2
+        "https://pusssafgpuizmhkhzsfb.supabase.co/storage/v1/object/public/Imagenes%20Landing%20Libors/Libros/Lectura%20de%20Libro/Leyendo%20huerta%20original.jpg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop", // Imagen 1
+        "https://images.pexels.com/photos/1029141/pexels-photo-1029141.jpeg?auto=compress&cs=tinysrgb&w=400&h=500&fit=crop"  // Imagen 2
       ],
       // EDITABLE: URL de descarga para El Camino a Cristo
       downloadUrl: "https://drive.google.com/file/d/10kCPzrz7BEtjLBzia4DBi5B1D5MoC8y0/view?usp=sharing"
