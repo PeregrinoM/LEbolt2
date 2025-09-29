@@ -61,20 +61,20 @@ const FAQ = () => {
   };
 
   return (
-    <section id="preguntas" className="py-8 px-4 sm:px-6 lg:px-8">
+    <section id="preguntas" className="py-6 md:py-8 px-4 sm:px-6 lg:px-8">
       <div className="max-w-4xl mx-auto">
-        <div className="text-center mb-8">
+        <div className="text-center mb-6 md:mb-8">
           {/* EDITABLE: Título de la sección */}
-          <h2 className="text-3xl md:text-4xl font-poppins font-bold text-esperanza-800 mb-4">
+          <h2 className="text-2xl md:text-4xl font-poppins font-bold text-esperanza-800 mb-3 md:mb-4">
             Preguntas Frecuentes
           </h2>
           {/* EDITABLE: Descripción de la sección */}
-          <p className="text-xl font-source text-esperanza-600">
+          <p className="text-lg md:text-xl font-source text-esperanza-600">
             Resolvemos todas tus dudas.
           </p>
         </div>
 
-        <div className="space-y-4">
+        <div className="space-y-3 md:space-y-4">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -82,9 +82,9 @@ const FAQ = () => {
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full px-6 py-6 text-left flex justify-between items-center hover:bg-celestial-50 transition-colors duration-200"
+                className="w-full px-4 py-4 md:px-6 md:py-6 text-left flex justify-between items-center hover:bg-celestial-50 transition-colors duration-200"
               >
-                <h3 className="text-lg font-poppins font-semibold text-esperanza-800 pr-4">
+                <h3 className="text-base md:text-lg font-poppins font-semibold text-esperanza-800 pr-4">
                   {faq.question}
                 </h3>
                 {openIndex === index ? (
@@ -95,9 +95,9 @@ const FAQ = () => {
               </button>
               
               {openIndex === index && (
-                <div className="px-6 pb-6">
+                <div className="px-4 pb-4 md:px-6 md:pb-6">
                   <div className="border-t border-celestial-100 pt-4">
-                    <p className="font-source text-esperanza-600 leading-relaxed">
+                    <p className="text-sm md:text-base font-source text-esperanza-600 leading-relaxed">
                       {faq.answer}
                     </p>
                   </div>
@@ -107,14 +107,14 @@ const FAQ = () => {
           ))}
         </div>
 
-        <div className="mt-16 text-center">
-          <div className="bg-gradient-dorado p-8 rounded-2xl border border-dorado-200">
+        <div className="mt-10 md:mt-16 text-center">
+          <div className="bg-gradient-dorado p-6 md:p-8 rounded-2xl border border-dorado-200">
             {/* EDITABLE: Título de la llamada a la acción */}
-            <h3 className="text-2xl font-poppins font-bold text-esperanza-800 mb-4">
+            <h3 className="text-xl md:text-2xl font-poppins font-bold text-esperanza-800 mb-3 md:mb-4">
               ¿Tienes otra pregunta?
             </h3>
             {/* EDITABLE: Descripción de la llamada a la acción */}
-            <p className="font-source text-esperanza-700 mb-6">
+            <p className="text-sm md:text-base font-source text-esperanza-700 mb-4 md:mb-6">
               No dudes en contactarnos, para eso estamos aquí.
             </p>
             {/* EDITABLE: Texto del botón */}
@@ -123,7 +123,7 @@ const FAQ = () => {
                 const element = document.getElementById('contacto');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="btn-celestial py-3 px-6 rounded-lg font-poppins font-semibold"
+              className="btn-celestial py-3 px-6 rounded-lg font-poppins font-semibold text-sm md:text-base"
             >
               Contáctanos
             </button>
