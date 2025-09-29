@@ -37,7 +37,7 @@ const AboutBooks = () => {
         "Esperanza para tiempos difíciles",
         "Historia profética revelada",
       ],
-      icon: <BookType className="h-8 w-8 text-dorado-500" />,
+      icon: <BookType className="h-8 w-8 text-celestial-500" />,
       gradient: "from-dorado-50 to-dorado-100",
       // EDITABLE: Imágenes del libro - Array de URLs para el carrusel
       images: [

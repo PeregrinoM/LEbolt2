@@ -821,8 +821,8 @@ const RequestForm = () => {
 
             {/* Información adicional */}
             <div className="text-center text-sm font-source text-esperanza-500 space-y-2">
-              <p>🔒 Tus datos están protegidos y nunca serán compartidos</p>
-              <p>📦 Envío completamente gratuito a todo Chile</p>
+              <p>🔒 100% Privacidad de tus datos</p>
+              <p>📦 Envío gratuito para Región de los Lagos</p>
               <p>⏱️ Procesamiento en 24-48 horas</p>
             </div>
           </form>
@@ -836,13 +836,18 @@ const RequestForm = () => {
                 <MessageCircle className="w-8 h-8 text-white" />
               </div>
               <h3 className="text-3xl font-poppins font-bold text-esperanza-800">
-                ¿Prefieres WhatsApp? 💬
+                ¿Prefieres WhatsApp?
               </h3>
             </div>
             
             <p className="font-source text-esperanza-700 text-xl leading-relaxed mb-6">
-            Si prefieres, escríbenos por WhatsApp. 
-              <span className="font-semibold text-esperanza-800"> ¡Sin formularios, más personal!</span>
+              <span className="block sm:inline">
+                Si prefieres, escríbenos por WhatsApp.
+              </span>
+              <span className="hidden sm:inline"> </span>
+              <span className="block sm:inline font-semibold text-esperanza-800">
+                ¡Sin formularios, más personal!
+              </span>
             </p>
             
             <button 

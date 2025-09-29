@@ -70,7 +70,7 @@ const FAQ = () => {
           </h2>
           {/* EDITABLE: Descripción de la sección */}
           <p className="text-xl font-source text-esperanza-600">
-            Resolvemos las dudas para que recivas tu libro.
+            Resolvemos todas tus dudas.
           </p>
         </div>
 
