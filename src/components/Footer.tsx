@@ -1,5 +1,5 @@
 import React from 'react';
-import { Book, Heart, Mail, Phone } from 'lucide-react';
+import { Book, Heart, Mail, Phone, MessageCircle } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
