@@ -8,7 +8,7 @@ const FAQ = () => {
   const faqs = [
     {
       // EDITABLE: Pregunta 1
-      question: "¿Realmente es completamente gratuito?",
+      question: "¿Realmente es 100% gratis?",
       // EDITABLE: Respuesta 1
       answer: "Sí, absolutamente gratuito. No hay costos ocultos, no pagas envío, no hay suscripciones. Es un regalo 🎁 genuino para ti ♥️."
     },
@@ -32,13 +32,13 @@ const FAQ = () => {
     },
     {
       // EDITABLE: Pregunta 5
-      question: "¿Necesito tener conocimientos bíblicos previos?",
+      question: "¿Necesito saber de la Bibliacos antes?",
       // EDITABLE: Respuesta 5
       answer: "No es necesario. Ambos libros 📙 están escritos de manera clara y comprensible para cualquier persona, sin importar su trasfondo religioso."
     },
     {
       // EDITABLE: Pregunta 7
-      question: "¿Qué denominación religiosa está detrás de esto?",
+      question: "¿Qué iglesia está detrás de esto?",
       // EDITABLE: Respuesta 7
       answer: "No representamos ninguna denominación específica. Te invitamos unicamente a la Fe en el Hijo de Dios 'Jesús'."
     },
