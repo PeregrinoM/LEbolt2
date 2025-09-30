@@ -39,7 +39,6 @@ const Footer = () => {
                   onClick={() => document.getElementById('inicio')?.scrollIntoView({ behavior: 'smooth' })}
                   className="font-source text-gray-300 hover:text-celestial-400 transition-colors duration-200"
                 >
-                  Inicio
                 </button>
               </li>
               <li>
@@ -49,7 +48,7 @@ const Footer = () => {
                 >
                   Los Libros
                 </button>
-              </li>
+                <i className="fab fa-whatsapp h-5 w-5 text-white"></i>
               <li>
                 <button 
                   onClick={() => document.getElementById('testimonios')?.scrollIntoView({ behavior: 'smooth' })}
@@ -63,7 +62,7 @@ const Footer = () => {
                   onClick={() => document.getElementById('solicitar')?.scrollIntoView({ behavior: 'smooth' })}
                   className="font-source text-gray-300 hover:text-celestial-400 transition-colors duration-200"
                 >
-                  Solicitar Libro
+                <i className="fas fa-phone h-5 w-5 text-white"></i>
                 </button>
               </li>
               <li>
@@ -80,17 +79,14 @@ const Footer = () => {
           {/* Contacto */}
           <div>
             {/* EDITABLE: Título de contacto */}
-            <h3 className="text-lg font-poppins font-semibold mb-4">Contacto</h3>
-            <div className="space-y-4">
-              {/* Email */}
+                  // TODO: Reemplazar 'tu-canal' con tu canal real de YouTube
+                  // window.open('https://youtube.com/@tu-canal', '_blank');
               <a 
                 href="mailto:peregrinomensajero@gmail.com" 
                 className="flex items-center group hover:text-celestial-400 transition-colors duration-200"
                 title="Enviar email"
               >
-                <div className="bg-celestial-500 p-2 rounded-full mr-3 group-hover:bg-celestial-400 transition-colors duration-200">
-                  <Mail className="h-5 w-5 text-white" />
-                </div>
+                  <i className="fab fa-youtube h-5 w-5 text-white"></i>
                 <div className="hidden sm:block">
                   <span className="font-source text-gray-300 text-sm group-hover:text-celestial-400">peregrinomensajero@gmail.com</span>
                 </div>
@@ -99,17 +95,14 @@ const Footer = () => {
               {/* WhatsApp */}
               <a 
                 href="#" 
-                onClick={(e) => {
-                  e.preventDefault();
-                  // TODO: Reemplazar con tu número de WhatsApp
+                  // TODO: Reemplazar 'tu-pagina' con tu página real de Facebook
+                  // window.open('https://facebook.com/tu-pagina', '_blank');
                   const phoneNumber = "56984413846";
                   const message = encodeURIComponent("¡Hola! Vi su página web y me interesa recibir información sobre los libros.");
                   const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
                   window.open(whatsappURL, '_blank');
                 }}
-                className="flex items-center group hover:text-green-400 transition-colors duration-200"
-                title="Contactar por WhatsApp"
-              >
+                  <i className="fab fa-facebook-f h-5 w-5 text-white"></i>
                 <div className="bg-whatsapp-500 p-2 rounded-full mr-3 group-hover:bg-whatsapp-400 transition-colors duration-200">
                   <MessageCircle className="h-5 w-5 text-white" />
                 </div>
@@ -118,17 +111,14 @@ const Footer = () => {
                 </div>
               </a>
               
-              {/* Teléfono */}
-              <a 
-                href="tel:+56984413846" 
+                  // TODO: Reemplazar 'tu-perfil' con tu perfil real de Instagram
+                  // window.open('https://instagram.com/tu-perfil', '_blank');
                 className="flex items-center group hover:text-green-400 transition-colors duration-200"
                 title="Llamar por teléfono"
               >
                 <div className="bg-green-500 p-2 rounded-full mr-3 group-hover:bg-green-400 transition-colors duration-200">
                   <Phone className="h-5 w-5 text-white" />
-                </div>
-                <div className="hidden sm:block">
-                  <span className="font-source text-gray-300 text-sm group-hover:text-green-400">+56 9 8441 3846</span>
+                  <i className="fab fa-instagram h-5 w-5 text-white"></i>
                 </div>
               </a>
             </div>
@@ -192,7 +182,7 @@ const Footer = () => {
                       <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 6.62 5.367 11.987 11.988 11.987c6.62 0 11.987-5.367 11.987-11.987C24.014 5.367 18.637.001 12.017.001zM8.449 16.988c-1.297 0-2.448-.49-3.323-1.297C4.198 14.895 3.708 13.744 3.708 12.447s.49-2.448 1.418-3.323C6.001 8.198 7.152 7.708 8.449 7.708s2.448.49 3.323 1.416c.875.875 1.365 2.026 1.365 3.323s-.49 2.448-1.365 3.323c-.875.807-2.026 1.218-3.323 1.218zm7.718-1.297c-.875.807-2.026 1.297-3.323 1.297s-2.448-.49-3.323-1.297c-.875-.875-1.365-2.026-1.365-3.323s.49-2.448 1.365-3.323c.875-.926 2.026-1.416 3.323-1.416s2.448.49 3.323 1.416c.875.875 1.365 2.026 1.365 3.323s-.49 2.448-1.365 3.323z"/>
                     </svg>
                   </div>
-                </a>
+                <i className="fas fa-envelope h-5 w-5 text-white"></i>
               </div>
             </div>
           </div>
