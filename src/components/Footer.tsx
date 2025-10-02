@@ -88,11 +88,9 @@ const Footer = () => {
                 className="flex items-center group hover:text-celestial-400 transition-colors duration-200"
                 title="Enviar email"
               >
-                <div className="bg-blue-500 p-2 rounded-full mr-3 group-hover:bg-blue-400 transition-colors duration-200">
-                  <i className="fas fa-envelope h-5 w-5 text-white"></i>
-                </div>
+                <i className="fas fa-envelope h-5 w-5 text-celestial-400 mr-3"></i>
                 <div className="hidden sm:block">
-                  <span className="font-source text-gray-300 text-sm group-hover:text-celestial-400">peregrinomensajero@gmail.com</span>
+                  <span className="font-source text-gray-300 text-sm group-hover:text-celestial-300">peregrinomensajero@gmail.com</span>
                 </div>
               </a>
               
@@ -106,28 +104,24 @@ const Footer = () => {
                   const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
                   window.open(whatsappURL, '_blank');
                 }}
-                className="flex items-center group hover:text-green-400 transition-colors duration-200"
+                className="flex items-center group hover:text-celestial-300 transition-colors duration-200"
                 title="Contactar por WhatsApp"
               >
-                <div className="bg-whatsapp-500 p-2 rounded-full mr-3 group-hover:bg-whatsapp-400 transition-colors duration-200">
-                  <i className="fab fa-whatsapp h-5 w-5 text-white"></i>
-                </div>
+                <i className="fab fa-whatsapp h-5 w-5 text-celestial-400 mr-3"></i>
                 <div className="hidden sm:block">
-                  <span className="font-source text-gray-300 text-sm group-hover:text-green-400">WhatsApp</span>
+                  <span className="font-source text-gray-300 text-sm group-hover:text-celestial-300">WhatsApp</span>
                 </div>
               </a>
               
               {/* Teléfono */}
               <a 
                 href="tel:+56984413846"
-                className="flex items-center group hover:text-green-400 transition-colors duration-200"
+                className="flex items-center group hover:text-celestial-300 transition-colors duration-200"
                 title="Llamar por teléfono"
               >
-                <div className="bg-green-500 p-2 rounded-full mr-3 group-hover:bg-green-400 transition-colors duration-200">
-                  <i className="fas fa-phone h-5 w-5 text-white"></i>
-                </div>
+                <i className="fas fa-phone h-5 w-5 text-celestial-400 mr-3"></i>
                 <div className="hidden sm:block">
-                  <span className="font-source text-gray-300 text-sm group-hover:text-green-400">+56 9 8441 3846</span>
+                  <span className="font-source text-gray-300 text-sm group-hover:text-celestial-300">+56 9 8441 3846</span>
                 </div>
               </a>
             </div>
@@ -145,12 +139,10 @@ const Footer = () => {
                     // window.open('https://youtube.com/@tu-canal', '_blank');
                     console.log('TODO: Agregar enlace de YouTube');
                   }}
-                  className="group"
+                  className="group hover:text-celestial-300 transition-colors duration-200"
                   title="YouTube"
                 >
-                  <div className="bg-red-600 p-2 rounded-full group-hover:bg-red-500 transition-colors duration-200">
-                    <i className="fab fa-youtube h-5 w-5 text-white"></i>
-                  </div>
+                  <i className="fab fa-youtube h-5 w-5 text-celestial-400"></i>
                 </a>
                 
                 {/* Facebook */}
@@ -162,12 +154,10 @@ const Footer = () => {
                     // window.open('https://facebook.com/tu-pagina', '_blank');
                     console.log('TODO: Agregar enlace de Facebook');
                   }}
-                  className="group"
+                  className="group hover:text-celestial-300 transition-colors duration-200"
                   title="Facebook"
                 >
-                  <div className="bg-blue-600 p-2 rounded-full group-hover:bg-blue-500 transition-colors duration-200">
-                    <i className="fab fa-facebook-f h-5 w-5 text-white"></i>
-                  </div>
+                  <i className="fab fa-facebook-f h-5 w-5 text-celestial-400"></i>
                 </a>
                 
                 {/* Instagram */}
@@ -179,12 +169,10 @@ const Footer = () => {
                     // window.open('https://instagram.com/tu-perfil', '_blank');
                     console.log('TODO: Agregar enlace de Instagram');
                   }}
-                  className="group"
+                  className="group hover:text-celestial-300 transition-colors duration-200"
                   title="Instagram"
                 >
-                  <div className="bg-gradient-to-r from-purple-500 to-pink-500 p-2 rounded-full group-hover:from-purple-400 group-hover:to-pink-400 transition-all duration-200">
-                    <i className="fab fa-instagram h-5 w-5 text-white"></i>
-                  </div>
+                  <i className="fab fa-instagram h-5 w-5 text-celestial-400"></i>
                 </a>
               </div>
             </div>
