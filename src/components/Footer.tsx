@@ -79,19 +79,56 @@ const Footer = () => {
 
           {/* Contacto */}
           <div>
-            {/* EDITABLE: Título de contacto */}
-            <h3 className="text-lg font-poppins font-semibold mb-4">Contacto</h3>
-            <div className="flex flex-row space-x-3 justify-center sm:flex-col sm:space-y-3 sm:space-x-0 sm:justify-start">
+            {/* EDITABLE: Título de contacto con iconos en la misma línea */}
+            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4">
+              <h3 className="text-lg font-poppins font-semibold mb-2 sm:mb-0">Contacto</h3>
+              <div className="flex flex-row space-x-3 justify-center sm:justify-start">
+                {/* Email */}
+                <a 
+                  href="mailto:peregrinomensajero@gmail.com" 
+                  className="flex items-center group hover:text-celestial-400 transition-colors duration-200"
+                  title="Enviar email"
+                >
+                  <i className="fas fa-envelope h-5 w-5 text-celestial-400"></i>
+                </a>
+                
+                {/* WhatsApp */}
+                <a 
+                  href="#" 
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const phoneNumber = "56984413846";
+                    const message = encodeURIComponent("¡Hola! Vi su página web y me interesa recibir información sobre los libros.");
+                    const whatsappURL = `https://wa.me/${phoneNumber}?text=${message}`;
+                    window.open(whatsappURL, '_blank');
+                  }}
+                  className="flex items-center group hover:text-celestial-300 transition-colors duration-200"
+                  title="Contactar por WhatsApp"
+                >
+                  <i className="fab fa-whatsapp h-5 w-5 text-celestial-400"></i>
+                </a>
+                
+                {/* Teléfono */}
+                <a 
+                  href="tel:+56984413846"
+                  className="flex items-center group hover:text-celestial-300 transition-colors duration-200"
+                  title="Llamar por teléfono"
+                >
+                  <i className="fas fa-phone h-5 w-5 text-celestial-400"></i>
+                </a>
+              </div>
+            </div>
+            
+            {/* Información de contacto detallada (solo visible en desktop) */}
+            <div className="hidden sm:block space-y-3">
               {/* Email */}
               <a 
                 href="mailto:peregrinomensajero@gmail.com" 
                 className="flex items-center group hover:text-celestial-400 transition-colors duration-200"
                 title="Enviar email"
               >
-                <i className="fas fa-envelope h-5 w-5 text-celestial-400 sm:mr-3"></i>
-                <div className="hidden sm:block">
-                  <span className="font-source text-gray-300 text-sm group-hover:text-celestial-300">peregrinomensajero@gmail.com</span>
-                </div>
+                <i className="fas fa-envelope h-5 w-5 text-celestial-400 mr-3"></i>
+                <span className="font-source text-gray-300 text-sm group-hover:text-celestial-300">peregrinomensajero@gmail.com</span>
               </a>
               
               {/* WhatsApp */}
@@ -107,10 +144,8 @@ const Footer = () => {
                 className="flex items-center group hover:text-celestial-300 transition-colors duration-200"
                 title="Contactar por WhatsApp"
               >
-                <i className="fab fa-whatsapp h-5 w-5 text-celestial-400 sm:mr-3"></i>
-                <div className="hidden sm:block">
-                  <span className="font-source text-gray-300 text-sm group-hover:text-celestial-300">WhatsApp</span>
-                </div>
+                <i className="fab fa-whatsapp h-5 w-5 text-celestial-400 mr-3"></i>
+                <span className="font-source text-gray-300 text-sm group-hover:text-celestial-300">WhatsApp</span>
               </a>
               
               {/* Teléfono */}
@@ -119,17 +154,65 @@ const Footer = () => {
                 className="flex items-center group hover:text-celestial-300 transition-colors duration-200"
                 title="Llamar por teléfono"
               >
-                <i className="fas fa-phone h-5 w-5 text-celestial-400 sm:mr-3"></i>
-                <div className="hidden sm:block">
-                  <span className="font-source text-gray-300 text-sm group-hover:text-celestial-300">+56 9 8441 3846</span>
-                </div>
+                <i className="fas fa-phone h-5 w-5 text-celestial-400 mr-3"></i>
+                <span className="font-source text-gray-300 text-sm group-hover:text-celestial-300">+56 9 8441 3846</span>
               </a>
             </div>
             
             {/* Redes Sociales */}
             <div className="mt-6">
-              <h4 className="text-sm font-poppins font-semibold mb-3 text-gray-300">Síguenos</h4>
-              <div className="flex space-x-3">
+              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
+                <h4 className="text-sm font-poppins font-semibold mb-2 sm:mb-0 text-gray-300">Síguenos</h4>
+                <div className="flex space-x-3 justify-center sm:justify-start">
+                  {/* YouTube */}
+                  <a 
+                    href="#" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // TODO: Reemplazar con tu canal de YouTube
+                      // window.open('https://youtube.com/@tu-canal', '_blank');
+                      console.log('TODO: Agregar enlace de YouTube');
+                    }}
+                    className="group hover:text-celestial-300 transition-colors duration-200"
+                    title="YouTube"
+                  >
+                    <i className="fab fa-youtube h-5 w-5 text-celestial-400"></i>
+                  </a>
+                  
+                  {/* Facebook */}
+                  <a 
+                    href="#" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // TODO: Reemplazar con tu página de Facebook
+                      // window.open('https://facebook.com/tu-pagina', '_blank');
+                      console.log('TODO: Agregar enlace de Facebook');
+                    }}
+                    className="group hover:text-celestial-300 transition-colors duration-200"
+                    title="Facebook"
+                  >
+                    <i className="fab fa-facebook-f h-5 w-5 text-celestial-400"></i>
+                  </a>
+                  
+                  {/* Instagram */}
+                  <a 
+                    href="#" 
+                    onClick={(e) => {
+                      e.preventDefault();
+                      // TODO: Reemplazar con tu perfil de Instagram
+                      // window.open('https://instagram.com/tu-perfil', '_blank');
+                      console.log('TODO: Agregar enlace de Instagram');
+                    }}
+                    className="group hover:text-celestial-300 transition-colors duration-200"
+                    title="Instagram"
+                  >
+                    <i className="fab fa-instagram h-5 w-5 text-celestial-400"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
                 {/* YouTube */}
                 <a 
                   href="#" 
