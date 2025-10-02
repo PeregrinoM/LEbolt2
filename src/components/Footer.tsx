@@ -81,7 +81,6 @@ const Footer = () => {
           <div>
             {/* EDITABLE: Título de contacto */}
             <h3 className="text-lg font-poppins font-semibold mb-4">Contacto</h3>
-            <div className="space-y-3">
             <div className="flex flex-row space-x-3 justify-center sm:flex-col sm:space-y-3 sm:space-x-0 sm:justify-start">
               {/* Email */}
               <a 
@@ -206,5 +205,3 @@ const Footer = () => {
 };
 
 export default Footer;
-  )
-}
