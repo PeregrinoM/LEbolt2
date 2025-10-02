@@ -47,9 +47,9 @@ const Process = () => {
   ];
 
   return (
-    <section className="py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-celestial-50 to-dorado-50">
+    <section className="py-12 md:py-24 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-celestial-50 to-dorado-50">
       <div className="max-w-7xl mx-auto">
-        <div className="text-center mb-20">
+        <div className="text-center mb-10 md:mb-20">
           {/* EDITABLE: Título de la sección */}
           <h2 className="text-4xl md:text-5xl font-poppins font-bold text-esperanza-800 mb-6">
             ¿Cómo Funciona?
@@ -61,11 +61,11 @@ const Process = () => {
         </div>
 
         {/* Hoja de ruta gráfica */}
-        <div className="relative mb-20">
+        <div className="relative mb-10 md:mb-20">
           {/* Línea conectora para desktop */}
           <div className="hidden lg:block absolute top-16 left-0 right-0 h-1 bg-gradient-to-r from-celestial-200 via-green-200 via-dorado-200 to-pink-200 rounded-full"></div>
           
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-8">
             {steps.map((step, index) => (
               <div
                 key={index}
@@ -76,25 +76,25 @@ const Process = () => {
                   <div className="lg:hidden absolute top-20 left-1/2 transform -translate-x-1/2 w-1 h-16 bg-gradient-to-b from-celestial-200 to-transparent"></div>
                 )}
                 
-                <div className="card-celestial p-8 rounded-2xl hover:scale-105 transform transition-all duration-300 group-hover:shadow-2xl">
+                <div className="card-celestial p-4 md:p-8 rounded-2xl hover:scale-105 transform transition-all duration-300 group-hover:shadow-2xl">
                   <div className="flex flex-col items-center text-center">
                     {/* Icono con animación */}
-                    <div className={`bg-${step.color}-100 p-4 rounded-full border-2 border-${step.color}-200 mb-6 group-hover:scale-110 transition-transform duration-300`}>
+                    <div className={`bg-${step.color}-100 p-4 rounded-full border-2 border-${step.color}-200 mb-3 md:mb-6 group-hover:scale-110 transition-transform duration-300`}>
                       {step.icon}
                     </div>
                     
                     {/* Número de paso */}
-                    <div className={`bg-${step.color}-100 text-${step.color}-700 text-sm font-poppins font-bold px-4 py-2 rounded-full border border-${step.color}-200 mb-4`}>
+                    <div className={`bg-${step.color}-100 text-${step.color}-700 text-sm font-poppins font-bold px-4 py-2 rounded-full border border-${step.color}-200 mb-2 md:mb-4`}>
                       Paso {index + 1}
                     </div>
                     
                     {/* Título */}
-                    <h3 className="text-xl font-poppins font-bold text-esperanza-800 mb-3">
+                    <h3 className="text-xl font-poppins font-bold text-esperanza-800 mb-2 md:mb-3">
                       {step.title}
                     </h3>
                     
                     {/* Descripción */}
-                    <p className="font-source text-esperanza-600 leading-relaxed mb-4">
+                    <p className="hidden md:block font-source text-esperanza-600 leading-relaxed mb-0 md:mb-4">
                       {step.description}
                     </p>
                     
@@ -111,7 +111,7 @@ const Process = () => {
         </div>
 
         {/* Garantías y políticas */}
-        <div className="grid md:grid-cols-2 gap-8">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8">
           <div className="card-celestial p-8 rounded-2xl">
             <div className="flex items-center mb-4">
               <Shield className="h-8 w-8 text-green-500 mr-3" />
@@ -136,11 +136,11 @@ const Process = () => {
             </button>
           </div>
 
-          <div className="card-celestial p-8 rounded-2xl">
+          <div className="card-celestial p-6 md:p-8 rounded-2xl">
             <div className="flex items-center mb-4">
               <Heart className="h-8 w-8 text-pink-500 mr-3" />
               {/* EDITABLE: Título de misión */}
-              <h3 className="text-2xl font-poppins font-bold text-esperanza-800">
+              <h3 className="text-2xl font-poppins font-bold text-esperanza-800 mb-2 md:mb-4">
                 ¿Por qué es gratuito?
               </h3>
             </div>
@@ -154,7 +154,7 @@ const Process = () => {
                 const element = document.getElementById('contacto');
                 if (element) element.scrollIntoView({ behavior: 'smooth' });
               }}
-              className="text-celestial-600 hover:text-celestial-700 font-source font-semibold mt-3 inline-flex items-center"
+              className="text-celestial-600 hover:text-celestial-700 font-source font-semibold mt-2 md:mt-3 inline-flex items-center"
             >
               Conoce nuestra misión →
             </button>
