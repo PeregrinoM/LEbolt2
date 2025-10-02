@@ -82,13 +82,14 @@ const Footer = () => {
             {/* EDITABLE: Título de contacto */}
             <h3 className="text-lg font-poppins font-semibold mb-4">Contacto</h3>
             <div className="space-y-3">
+            <div className="flex flex-row space-x-3 justify-center sm:flex-col sm:space-y-3 sm:space-x-0 sm:justify-start">
               {/* Email */}
               <a 
                 href="mailto:peregrinomensajero@gmail.com" 
                 className="flex items-center group hover:text-celestial-400 transition-colors duration-200"
                 title="Enviar email"
               >
-                <i className="fas fa-envelope h-5 w-5 text-celestial-400 mr-3"></i>
+                <i className="fas fa-envelope h-5 w-5 text-celestial-400 sm:mr-3"></i>
                 <div className="hidden sm:block">
                   <span className="font-source text-gray-300 text-sm group-hover:text-celestial-300">peregrinomensajero@gmail.com</span>
                 </div>
@@ -107,7 +108,7 @@ const Footer = () => {
                 className="flex items-center group hover:text-celestial-300 transition-colors duration-200"
                 title="Contactar por WhatsApp"
               >
-                <i className="fab fa-whatsapp h-5 w-5 text-celestial-400 mr-3"></i>
+                <i className="fab fa-whatsapp h-5 w-5 text-celestial-400 sm:mr-3"></i>
                 <div className="hidden sm:block">
                   <span className="font-source text-gray-300 text-sm group-hover:text-celestial-300">WhatsApp</span>
                 </div>
@@ -119,7 +120,7 @@ const Footer = () => {
                 className="flex items-center group hover:text-celestial-300 transition-colors duration-200"
                 title="Llamar por teléfono"
               >
-                <i className="fas fa-phone h-5 w-5 text-celestial-400 mr-3"></i>
+                <i className="fas fa-phone h-5 w-5 text-celestial-400 sm:mr-3"></i>
                 <div className="hidden sm:block">
                   <span className="font-source text-gray-300 text-sm group-hover:text-celestial-300">+56 9 8441 3846</span>
                 </div>
