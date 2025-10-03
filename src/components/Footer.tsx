@@ -213,54 +213,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-                {/* YouTube */}
-                <a 
-                  href="#" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    // TODO: Reemplazar con tu canal de YouTube
-                    // window.open('https://youtube.com/@tu-canal', '_blank');
-                    console.log('TODO: Agregar enlace de YouTube');
-                  }}
-                  className="group hover:text-celestial-300 transition-colors duration-200"
-                  title="YouTube"
-                >
-                  <i className="fab fa-youtube h-5 w-5 text-celestial-400"></i>
-                </a>
-                
-                {/* Facebook */}
-                <a 
-                  href="#" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    // TODO: Reemplazar con tu página de Facebook
-                    // window.open('https://facebook.com/tu-pagina', '_blank');
-                    console.log('TODO: Agregar enlace de Facebook');
-                  }}
-                  className="group hover:text-celestial-300 transition-colors duration-200"
-                  title="Facebook"
-                >
-                  <i className="fab fa-facebook-f h-5 w-5 text-celestial-400"></i>
-                </a>
-                
-                {/* Instagram */}
-                <a 
-                  href="#" 
-                  onClick={(e) => {
-                    e.preventDefault();
-                    // TODO: Reemplazar con tu perfil de Instagram
-                    // window.open('https://instagram.com/tu-perfil', '_blank');
-                    console.log('TODO: Agregar enlace de Instagram');
-                  }}
-                  className="group hover:text-celestial-300 transition-colors duration-200"
-                  title="Instagram"
-                >
-                  <i className="fab fa-instagram h-5 w-5 text-celestial-400"></i>
-                </a>
-              </div>
-            </div>
-          </div>
-        </div>
 
         <div className="border-t border-esperanza-700 mt-8 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
