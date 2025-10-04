@@ -161,9 +161,9 @@ const Footer = () => {
             
             {/* Redes Sociales */}
             <div className="mt-6">
-              <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4">
-                <h4 className="text-sm font-poppins font-semibold mb-2 sm:mb-0 text-gray-300">Síguenos</h4>
-                <div className="flex space-x-3 justify-center sm:justify-start">
+              <div className="flex flex-row items-center space-x-4">
+                <h4 className="text-sm font-poppins font-semibold text-gray-300">Síguenos</h4>
+                <div className="flex space-x-3">
                   {/* YouTube */}
                   <a 
                     href="#" 
