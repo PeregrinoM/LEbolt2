@@ -81,8 +81,8 @@ const Footer = () => {
           <div>
             {/* EDITABLE: Título de contacto con iconos en la misma línea */}
             <div className="flex flex-row items-center space-x-4 mb-4">
-              <h3 className="text-lg font-poppins font-semibold">Contacto</h3>
-              <div className="flex flex-row space-x-3">
+              <h3 className="text-sm font-poppins font-semibold">Contacto</h3>
+              <div className="flex flex-row items-center space-x-3">
                 {/* Email */}
                 <a 
                   href="mailto:peregrinomensajero@gmail.com" 
@@ -163,7 +163,7 @@ const Footer = () => {
             <div className="mt-6">
               <div className="flex flex-row items-center space-x-4">
                 <h4 className="text-sm font-poppins font-semibold text-gray-300">Síguenos</h4>
-                <div className="flex space-x-3">
+                <div className="flex items-center space-x-3">
                   {/* YouTube */}
                   <a 
                     href="#" 
