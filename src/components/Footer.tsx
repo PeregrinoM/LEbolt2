@@ -80,9 +80,9 @@ const Footer = () => {
           {/* Contacto */}
           <div>
             {/* EDITABLE: Título de contacto con iconos en la misma línea */}
-            <div className="flex flex-col sm:flex-row sm:items-center sm:space-x-4 mb-4">
-              <h3 className="text-lg font-poppins font-semibold mb-2 sm:mb-0">Contacto</h3>
-              <div className="flex flex-row space-x-3 justify-center sm:justify-start">
+            <div className="flex flex-row items-center space-x-4 mb-4">
+              <h3 className="text-lg font-poppins font-semibold">Contacto</h3>
+              <div className="flex flex-row space-x-3">
                 {/* Email */}
                 <a 
                   href="mailto:peregrinomensajero@gmail.com" 
