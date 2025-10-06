@@ -220,7 +220,7 @@ const Footer = () => {
             <div className="font-source text-gray-400 text-sm mb-4 md:mb-0">
               {/* EDITABLE: Texto de copyright */}
               © {currentYear} Libros de Amparo y Fortaleza. Todos los derechos liberados. 
-              <span className="text-celestial-400">Chile 🇨🇱</span>
+              <span className="text-celestial-400">  Chile 🇨🇱</span>
             </div>
           </div>
         </div>
