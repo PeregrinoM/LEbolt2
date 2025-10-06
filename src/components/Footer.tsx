@@ -222,11 +222,6 @@ const Footer = () => {
               © {currentYear} Libros de Amparo y Fortaleza. Todos los derechos liberados. 
               <span className="text-celestial-400">Chile 🇨🇱</span>
             </div>
-            <div className="font-source text-gray-400 text-sm">
-              {/* EDITABLE: Enlaces legales y país */}
-              <span>Privacidad • Términos • </span>
-              
-            </div>
           </div>
         </div>
       </div>
