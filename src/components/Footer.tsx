@@ -228,13 +228,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
-        <div className="mt-6 text-center sm:text-center text-left">
-          {/* EDITABLE: Versículo bíblico o cita inspiracional */}
-          <p className="font-source text-gray-400 text-sm italic">
-            "Dejen todas sus preocupaciones a Dios, porque él se interesa por ustedes." - 1 Pedro 5:7
-          </p>
-        </div>
       </div>
     </footer>
   );
